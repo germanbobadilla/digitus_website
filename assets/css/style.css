@@ -1,0 +1,57 @@
+/* Minimal custom styles. All class names are in English; content stays Spanish. */
+
+.container { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+.section { padding-top: 4rem; padding-bottom: 4rem; }
+.section-title { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; color: rgb(15 23 42); text-align: center; }
+.section-subtitle { margin-top: 0.5rem; color: rgb(71 85 105); text-align: center; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 0.5rem; padding: 0.625rem 1rem; font-weight: 600; }
+.btn-primary { background-color: rgb(37 99 235); color: white; }
+.btn-primary:hover { background-color: rgb(29 78 216); }
+.btn-outline { border: 1px solid rgb(203 213 225); color: rgb(30 41 59); }
+.btn-outline:hover { background-color: rgb(241 245 249); }
+
+.nav-link { color: rgb(71 85 105); }
+.nav-link:hover { color: rgb(30 64 175); }
+
+.card { background-color: white; border: 1px solid rgb(226 232 240); border-radius: 0.75rem; padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.card-icon { width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: inline-flex; align-items: center; justify-content: center; }
+.card-title { margin-top: 0.75rem; font-weight: 600; color: rgb(15 23 42); }
+.card-text { margin-top: 0.5rem; color: rgb(71 85 105); }
+
+/* Subtle card hover and tighter max width for nicer spacing */
+.card { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(2,6,23,.08); }
+
+/* Small card variant for dense grids */
+.card-sm { padding: 0.75rem; }
+.card-sm .card-icon { width: 2.25rem; height: 2.25rem; }
+.card-sm .icon-lg { width: 1.25rem; height: 1.25rem; }
+
+.icon-card { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border: 1px solid rgb(226 232 240); border-radius: 0.75rem; background-color: white; }
+.icon-xl { width: 2.5rem; height: 2.5rem; color: rgb(30 64 175); }
+.icon-lg { width: 1.75rem; height: 1.75rem; }
+
+.check { color: rgb(22 163 74); font-weight: 700; }
+
+.step { background: white; border: 1px solid rgb(226 232 240); border-radius: 0.75rem; padding: 1rem; }
+.step-number { width: 2rem; height: 2rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: rgb(219 234 254); color: rgb(30 64 175); font-weight: 700; }
+.step-title { margin-top: 0.5rem; font-weight: 600; color: rgb(15 23 42); }
+.step-text { margin-top: 0.25rem; color: rgb(71 85 105); }
+
+.tech-chip { display: inline-flex; align-items: center; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgb(241 245 249); color: rgb(30 41 59); font-size: 0.875rem; }
+
+.form-label { display: block; font-size: 0.875rem; color: rgb(71 85 105); margin-bottom: 0.25rem; }
+.form-input { width: 100%; border: 1px solid rgb(203 213 225); border-radius: 0.5rem; padding: 0.625rem 0.75rem; }
+.form-input:focus { outline: none; border-color: rgb(37 99 235); box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
+
+/* Utilities for JS toggles */
+.hidden { display: none; }
+
+/* Section decorative waves */
+.section-divider { position: relative; height: 60px; overflow: hidden; }
+.section-divider.top-wave { background: linear-gradient(to bottom, rgba(59,130,246,0.06), rgba(59,130,246,0)); }
+.section-divider.bottom-wave { background: linear-gradient(to top, rgba(59,130,246,0.06), rgba(59,130,246,0)); }
+
+
+
