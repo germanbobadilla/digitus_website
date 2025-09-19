@@ -69,34 +69,37 @@ function init_contact_form() {
 
     try {
       // Create mailto link with pre-filled content
-      const subject = encodeURIComponent(`Consulta desde Digitus.com.do - ${payload.name}`);
+      const subject = encodeURIComponent(
+        `Consulta desde Digitus.com.do - ${payload.name}`
+      );
       const body = encodeURIComponent(
         `Hola Digitus,\n\n` +
-        `Mi nombre es: ${payload.name}\n` +
-        `Mi email es: ${payload.email}\n\n` +
-        `Mensaje:\n${payload.message}\n\n` +
-        `Saludos,\n${payload.name}`
+          `Mi nombre es: ${payload.name}\n` +
+          `Mi email es: ${payload.email}\n\n` +
+          `Mensaje:\n${payload.message}\n\n` +
+          `Saludos,\n${payload.name}`
       );
-      
+
       const mailtoLink = `mailto:info@digitus.com.do?subject=${subject}&body=${body}`;
-      
+
       // Open email client
       window.location.href = mailtoLink;
-      
+
       // Update status
       status.textContent = "Abriendo tu cliente de email...";
       status.setAttribute("aria-live", "polite");
-      
+
       // Reset form after a short delay
       setTimeout(() => {
         form.reset();
-        status.textContent = "Email preparado. Si no se abrió tu cliente de email, por favor envíanos un email a info@digitus.com.do";
+        status.textContent =
+          "Email preparado. Si no se abrió tu cliente de email, por favor envíanos un email a info@digitus.com.do";
         status.classList.remove("text-slate-600");
         status.classList.add("text-green-600");
       }, 1000);
-      
     } catch (err) {
-      status.textContent = "Error al preparar el email. Por favor contacta a info@digitus.com.do directamente.";
+      status.textContent =
+        "Error al preparar el email. Por favor contacta a info@digitus.com.do directamente.";
       status.classList.remove("text-slate-600");
       status.classList.add("text-red-600");
       status.setAttribute("aria-live", "assertive");

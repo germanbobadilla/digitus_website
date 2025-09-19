@@ -517,35 +517,279 @@
         <div class="section-divider bottom-wave" aria-hidden="true"></div>
 
         <!-- Proceso -->
-        <section id="process" class="section">
+        <section id="process" class="section bg-gradient-to-br from-slate-50 to-blue-50">
             <div class="container">
-                <h2 class="section-title">Proceso</h2>
-                <div class="mt-10 grid gap-6 md:grid-cols-4">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Descubrimiento</h3>
-                        <p class="step-text">Entendemos objetivos, indicadores y restricciones para diseñar la
-                            estrategia y
-                            el roadmap.</p>
+                <h2 class="section-title">Nuestros Procesos</h2>
+                <p class="section-subtitle">Metodologías probadas y estándares de la industria para garantizar la excelencia en cada proyecto.</p>
+
+                <!-- Process Tabs -->
+                <div class="mt-12 flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="process-tab active bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" data-process="sdlc">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Desarrollo de Software</span>
+                        </div>
+                    </button>
+                    <button class="process-tab bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" data-process="addie">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            </div>
+                            <span class="font-medium">Diseño Educativo (ADDIE)</span>
+                        </div>
+                    </button>
+                    <button class="process-tab bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" data-process="content">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 10h6m-6 4h6m-6 4h4"/>
+                            </svg>
+                            </div>
+                            <span class="font-medium">Creación de Contenido</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- SDLC Process -->
+                <div id="sdlc" class="process-content active">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Software Development Lifecycle (SDLC)</h3>
+                            <p class="text-slate-600">Metodología ágil para el desarrollo de software de alta calidad</p>
+                        </div>
+                        <div class="process-timeline relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 rounded-full"></div>
+                            <div class="progress-bar absolute left-8 top-0 w-1 bg-blue-500 rounded-full h-full" style="width: 0%"></div>
+                            
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">1. Planificación & Análisis</h4>
+                                    <p class="text-blue-700 mb-3">Definimos requisitos, alcance y arquitectura del sistema</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Gathering Requirements</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technical Architecture</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Project Planning</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
+                                    <h4 class="text-lg font-semibold text-green-900 mb-2">2. Diseño & Prototipado</h4>
+                                    <p class="text-green-700 mb-3">Creamos wireframes, mockups y prototipos interactivos</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">UI/UX Design</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Database Design</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">API Design</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">3. Desarrollo & Testing</h4>
+                                    <p class="text-purple-700 mb-3">Implementación ágil con testing continuo y CI/CD</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Agile Development</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Unit Testing</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Integration Testing</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">4. Despliegue & Monitoreo</h4>
+                                    <p class="text-orange-700 mb-3">Deploy automatizado con monitoreo y métricas en tiempo real</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Automated Deployment</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Performance Monitoring</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Error Tracking</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
+                                    <h4 class="text-lg font-semibold text-red-900 mb-2">5. Mantenimiento & Mejora</h4>
+                                    <p class="text-red-700 mb-3">Soporte continuo, actualizaciones y optimización basada en feedback</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Bug Fixes</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Feature Updates</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance Optimization</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Diseño</h3>
-                        <p class="step-text">Arquitectura, experiencia y contenido orientados a conversión y
-                            escalabilidad.
-                        </p>
+                </div>
+
+                <!-- ADDIE Process -->
+                <div id="addie" class="process-content">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Modelo ADDIE para Diseño Educativo</h3>
+                            <p class="text-slate-600">Metodología sistemática para crear experiencias de aprendizaje efectivas</p>
+                        </div>
+                        <div class="process-timeline relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-green-300 rounded-full"></div>
+                            <div class="progress-bar absolute left-8 top-0 w-1 bg-green-500 rounded-full h-full" style="width: 0%"></div>
+                            
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
+                                    <h4 class="text-lg font-semibold text-green-900 mb-2">A - Análisis</h4>
+                                    <p class="text-green-700 mb-3">Identificamos necesidades de aprendizaje, audiencia y objetivos</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Needs Assessment</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Learner Analysis</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Goal Setting</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">D - Diseño</h4>
+                                    <p class="text-blue-700 mb-3">Estructuramos el contenido, actividades y estrategias de evaluación</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Content Structure</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Learning Activities</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Assessment Design</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">D - Desarrollo</h4>
+                                    <p class="text-purple-700 mb-3">Creamos materiales, recursos multimedia y plataformas de aprendizaje</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Content Creation</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Multimedia Development</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">LMS Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">I - Implementación</h4>
+                                    <p class="text-orange-700 mb-3">Lanzamos el programa educativo con soporte y seguimiento</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Pilot Testing</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">User Training</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Support System</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
+                                    <h4 class="text-lg font-semibold text-red-900 mb-2">E - Evaluación</h4>
+                                    <p class="text-red-700 mb-3">Medimos efectividad, recopilamos feedback y optimizamos continuamente</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance Metrics</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Learner Feedback</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Continuous Improvement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Construcción</h3>
-                        <p class="step-text">Desarrollo iterativo con calidad, pruebas, CI/CD y despliegues predecibles.
-                        </p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3 class="step-title">Evolución</h3>
-                        <p class="step-text">Medimos impacto, aprendemos y optimizamos con ciclos de mejora continua.
-                        </p>
+                </div>
+
+                <!-- Content Creation Process -->
+                <div id="content" class="process-content">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Proceso de Creación de Contenido</h3>
+                            <p class="text-slate-600">Metodología estratégica para contenido digital efectivo y optimizado</p>
+                        </div>
+                        <div class="process-timeline relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-purple-300 rounded-full"></div>
+                            <div class="progress-bar absolute left-8 top-0 w-1 bg-purple-500 rounded-full h-full" style="width: 0%"></div>
+                            
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">1. Investigación & Estrategia</h4>
+                                    <p class="text-purple-700 mb-3">Analizamos audiencia, competencia y definimos estrategia de contenido</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Audience Research</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Competitor Analysis</span>
+                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Content Strategy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">2. Planificación & Calendario</h4>
+                                    <p class="text-blue-700 mb-3">Estructuramos temas, calendario editorial y recursos necesarios</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Editorial Calendar</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Topic Planning</span>
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Resource Allocation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
+                                    <h4 class="text-lg font-semibold text-green-900 mb-2">3. Creación & Producción</h4>
+                                    <p class="text-green-700 mb-3">Desarrollamos contenido multimedia, textos y elementos visuales</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Content Writing</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Visual Design</span>
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Video Production</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16 pb-8">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">4. Optimización & SEO</h4>
+                                    <p class="text-orange-700 mb-3">Optimizamos para motores de búsqueda y plataformas sociales</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">SEO Optimization</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Social Media Optimization</span>
+                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Performance Tuning</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="process-step relative pl-16">
+                                <div class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
+                                    <h4 class="text-lg font-semibold text-red-900 mb-2">5. Distribución & Análisis</h4>
+                                    <p class="text-red-700 mb-3">Publicamos, distribuimos y analizamos el rendimiento del contenido</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Multi-channel Distribution</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Analytics Tracking</span>
+                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance Analysis</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -563,8 +807,10 @@
                     <div class="card p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">Diseño Web</h3>
@@ -587,8 +833,10 @@
                     <div class="card p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">Ingeniería de Software</h3>
@@ -612,7 +860,8 @@
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
                                 <svg class="w-6 h-6 text-brand-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.59-1.764.388-3.053-.15-3.973zM17.91 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C20.76 4.305 19.78 3 17.91 3zM2.25 6.825c-.54.92-.74 2.21-.15 3.973l3.295 9.527C2.156 18.456 0 14.979 0 11c0-1.875.478-3.638 1.318-5.175zM6.29 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C9.1 4.305 8.12 3 6.29 3z"/>
+                                    <path
+                                        d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.59-1.764.388-3.053-.15-3.973zM17.91 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C20.76 4.305 19.78 3 17.91 3zM2.25 6.825c-.54.92-.74 2.21-.15 3.973l3.295 9.527C2.156 18.456 0 14.979 0 11c0-1.875.478-3.638 1.318-5.175zM6.29 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C9.1 4.305 8.12 3 6.29 3z" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">WordPress</h3>
@@ -635,8 +884,10 @@
                     <div class="card p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">E-learning & Educación</h3>
@@ -659,8 +910,10 @@
                     <div class="card p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 10h6m-6 4h6m-6 4h4"/>
+                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 10h6m-6 4h6m-6 4h4" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">Creación de Contenido</h3>
@@ -683,8 +936,10 @@
                     <div class="card p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-dark-500">Hosting & Infraestructura</h3>
@@ -797,6 +1052,7 @@
     </footer>
 
     <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/processes.js"></script>
 </body>
 
 </html>
