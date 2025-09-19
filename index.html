@@ -57,7 +57,9 @@
 
 <body class="antialiased text-slate-800">
     <!-- Skip to main content link for screen readers -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Saltar al contenido principal</a>
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Saltar
+        al contenido principal</a>
     <!-- Header / Nav -->
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,19 +77,23 @@
                     <a href="#about" class="nav-link">Acerca de</a>
                     <a href="#process" class="nav-link">Proceso</a>
                     <a href="#tech" class="nav-link">Tecnologías</a>
-                    <a href="https://app.digitus.com.do" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Mis Servicios</a>
+                    <a href="https://app.digitus.com.do" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">Mis Servicios</a>
                 </nav>
-                <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
+                <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mobile-menu"
                     class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
                     <!-- Menu Icon -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white" role="navigation" aria-label="Menú móvil">
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white" role="navigation"
+            aria-label="Menú móvil">
             <div class="px-4 py-3 space-y-2">
                 <a href="#services" class="block nav-link">Servicios</a>
                 <a href="#design" class="block nav-link">Diseño web</a>
@@ -96,480 +102,550 @@
                 <a href="#about" class="block nav-link">Acerca de</a>
                 <a href="#process" class="block nav-link">Proceso</a>
                 <a href="#tech" class="block nav-link">Tecnologías</a>
-                <a href="https://app.digitus.com.do" target="_blank" rel="noopener noreferrer" class="block btn btn-primary w-full text-center">Mis Servicios</a>
+                <a href="https://app.digitus.com.do" target="_blank" rel="noopener noreferrer"
+                    class="block btn btn-primary w-full text-center">Mis Servicios</a>
             </div>
         </div>
     </header>
 
     <!-- Hero -->
     <main id="main-content">
-    <section id="home" class="relative overflow-hidden" role="banner" aria-labelledby="hero-title">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white pointer-events-none"></div>
-        <!-- Decorative blob -->
-        <svg class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] opacity-25" viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="#3b82f6"
-                d="M49.5,-58.1C64.3,-47.1,76.7,-31.7,80.1,-14.3C83.5,3.1,77.9,22.5,67.2,38.5C56.6,54.6,40.9,67.4,23.5,73.1C6,78.7,-13.2,77.2,-31,70.1C-48.8,63.1,-65.2,50.4,-73.4,33.7C-81.7,17,-81.7,-3.6,-74.7,-20.5C-67.6,-37.4,-53.5,-50.6,-38.3,-61.8C-23.1,-73.1,-6.8,-82.4,8.6,-82.1C24,-81.8,48.6,-71.1,49.5,-58.1Z"
-                transform="translate(100 100)" />
-        </svg>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 min-h-[70vh] flex items-center">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <h1 id="hero-title" class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500">Transformamos empresas con
-                        software, diseño y estrategia digital</h1>
-                    <p class="mt-6 text-lg text-slate-600">En Digitus Business & Software Solutions impulsamos el
-                        crecimiento de tu empresa con soluciones digitales: diseño web, WordPress, Moodle, desarrollo e
-                        ingeniería de software, y gestión de comunidades en redes sociales.</p>
-                    <div class="mt-8 flex flex-wrap gap-3">
-                        <a href="#services" class="btn btn-primary">Explorar servicios</a>
-                        <a href="#contact" class="btn btn-outline">Solicitar propuesta</a>
-                    </div>
-                    <div class="mt-10 flex items-center gap-6 text-slate-600">
-                        <div class="flex items-center gap-2">
-                            <!-- Shield Check Icon -->
-                            <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                            <span class="text-dark-500">Calidad empresarial</span>
+        <section id="home" class="relative overflow-hidden" role="banner" aria-labelledby="hero-title">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white pointer-events-none"></div>
+            <!-- Decorative blob -->
+            <svg class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] opacity-25"
+                viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#3b82f6"
+                    d="M49.5,-58.1C64.3,-47.1,76.7,-31.7,80.1,-14.3C83.5,3.1,77.9,22.5,67.2,38.5C56.6,54.6,40.9,67.4,23.5,73.1C6,78.7,-13.2,77.2,-31,70.1C-48.8,63.1,-65.2,50.4,-73.4,33.7C-81.7,17,-81.7,-3.6,-74.7,-20.5C-67.6,-37.4,-53.5,-50.6,-38.3,-61.8C-23.1,-73.1,-6.8,-82.4,8.6,-82.1C24,-81.8,48.6,-71.1,49.5,-58.1Z"
+                    transform="translate(100 100)" />
+            </svg>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 min-h-[70vh] flex items-center">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h1 id="hero-title" class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500">
+                            Transformamos empresas con
+                            software, diseño y estrategia digital</h1>
+                        <p class="mt-6 text-lg text-slate-600">En Digitus Business & Software Solutions impulsamos el
+                            crecimiento de tu empresa con soluciones digitales: diseño web, WordPress, Moodle,
+                            desarrollo e
+                            ingeniería de software, y gestión de comunidades en redes sociales.</p>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                            <a href="#services" class="btn btn-primary">Explorar servicios</a>
+                            <a href="#contact" class="btn btn-outline">Solicitar propuesta</a>
+                            <a href="https://wa.me/18096171000?text=Hola%20Digitus,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2">
+                                <!-- WhatsApp Icon -->
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
+                                WhatsApp
+                            </a>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <!-- Lightning Bolt Icon -->
-                            <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                            <span class="text-dark-500">Entrega ágil</span>
+                        <div class="mt-10 flex items-center gap-6 text-slate-600">
+                            <div class="flex items-center gap-2">
+                                <!-- Shield Check Icon -->
+                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                                <span class="text-dark-500">Calidad empresarial</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <!-- Lightning Bolt Icon -->
+                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                <span class="text-dark-500">Entrega ágil</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:pl-10">
+                        <!-- Icon mosaic instead of image -->
+                        <div class="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                            <div class="icon-card">
+                                <!-- Globe Alt -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                                <span>Presencia digital</span>
+                            </div>
+                            <div class="icon-card">
+                                <!-- Device Phone Mobile -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="icon-card">
+                                <!-- Cube -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                </svg>
+                                <span>Escalable</span>
+                            </div>
+                            <div class="icon-card">
+                                <!-- Code -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                                <span>Ingeniería</span>
+                            </div>
+                            <div class="icon-card">
+                                <!-- Academic Cap -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                </svg>
+                                <span>Moodle</span>
+                            </div>
+                            <div class="icon-card">
+                                <!-- Chat -->
+                                <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                                <span>Social Media</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:pl-10">
-                    <!-- Icon mosaic instead of image -->
-                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-4">
-                        <div class="icon-card">
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <div class="section-divider top-wave" aria-hidden="true"></div>
+        <section id="services" class="section" role="region" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title">Servicios</h2>
+                <p class="section-subtitle">Soluciones integrales para acelerar la transformación digital de tu empresa.
+                </p>
+
+                <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-2">
+                    <!-- Web design -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <!-- Paint Brush -->
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2a2 2 0 002-2V5a2 2 0 00-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Diseño web</h3>
+                        <p class="card-text">Sitios modernos, accesibles y centrados en conversión. Arquitectura clara,
+                            velocidad óptima y diseño responsive para comunicar tu propuesta de valor.</p>
+                    </article>
+
+                    <!-- WordPress -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
                             <!-- Globe Alt -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                             </svg>
-                            <span>Presencia digital</span>
                         </div>
-                        <div class="icon-card">
-                            <!-- Device Phone Mobile -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                            </svg>
-                            <span>Responsive</span>
-                        </div>
-                        <div class="icon-card">
-                            <!-- Cube -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                            </svg>
-                            <span>Escalable</span>
-                        </div>
-                        <div class="icon-card">
-                            <!-- Code -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                            </svg>
-                            <span>Ingeniería</span>
-                        </div>
-                        <div class="icon-card">
+                        <h3 class="card-title">WordPress</h3>
+                        <p class="card-text">Sitios administrables, seguros y escalables: desarrollo de temas y plugins,
+                            optimización SEO técnico y mantenimiento continuo.</p>
+                    </article>
+
+                    <!-- Moodle -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
                             <!-- Academic Cap -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                             </svg>
-                            <span>Moodle</span>
                         </div>
-                        <div class="icon-card">
+                        <h3 class="card-title">Moodle</h3>
+                        <p class="card-text">Implementación y personalización de plataformas e-learning. Diseño
+                            instruccional, analítica de aprendizaje e integración con sistemas existentes.</p>
+                    </article>
+
+                    <!-- Software Development -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <!-- Code -->
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Desarrollo de software</h3>
+                        <p class="card-text">Aplicaciones a medida, APIs y automatizaciones. Calidad de código, pruebas
+                            y
+                            despliegue continuo para acelerar la entrega de valor.</p>
+                    </article>
+
+                    <!-- Software Engineering -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <!-- Cog -->
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Ingeniería de software</h3>
+                        <p class="card-text">Arquitecturas robustas, seguridad, observabilidad y buenas prácticas de
+                            ingeniería para sistemas confiables y mantenibles.</p>
+                    </article>
+
+                    <!-- Social Media -->
+                    <article class="card">
+                        <div class="card-icon bg-brand-50 text-brand-700">
                             <!-- Chat -->
-                            <svg class="icon-xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                             </svg>
-                            <span>Social Media</span>
                         </div>
-                    </div>
+                        <h3 class="card-title">Social Media</h3>
+                        <p class="card-text">Estrategia, calendario editorial y community management. Contenido
+                            orientado a
+                            objetivos y crecimiento orgánico sostenido.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Servicios -->
-    <div class="section-divider top-wave" aria-hidden="true"></div>
-    <section id="services" class="section" role="region" aria-labelledby="services-title">
-        <div class="container">
-            <h2 id="services-title" class="section-title">Servicios</h2>
-            <p class="section-subtitle">Soluciones integrales para acelerar la transformación digital de tu empresa.</p>
+        <div class="section-divider bottom-wave" aria-hidden="true"></div>
 
-            <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-2">
-                <!-- Web design -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Paint Brush -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2a2 2 0 002-2V5a2 2 0 00-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Diseño web</h3>
-                    <p class="card-text">Sitios modernos, accesibles y centrados en conversión. Arquitectura clara,
-                        velocidad óptima y diseño responsive para comunicar tu propuesta de valor.</p>
-                </article>
-
-                <!-- WordPress -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Globe Alt -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">WordPress</h3>
-                    <p class="card-text">Sitios administrables, seguros y escalables: desarrollo de temas y plugins,
-                        optimización SEO técnico y mantenimiento continuo.</p>
-                </article>
-
-                <!-- Moodle -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Academic Cap -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Moodle</h3>
-                    <p class="card-text">Implementación y personalización de plataformas e-learning. Diseño
-                        instruccional, analítica de aprendizaje e integración con sistemas existentes.</p>
-                </article>
-
-                <!-- Software Development -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Code -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Desarrollo de software</h3>
-                    <p class="card-text">Aplicaciones a medida, APIs y automatizaciones. Calidad de código, pruebas y
-                        despliegue continuo para acelerar la entrega de valor.</p>
-                </article>
-
-                <!-- Software Engineering -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Cog -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Ingeniería de software</h3>
-                    <p class="card-text">Arquitecturas robustas, seguridad, observabilidad y buenas prácticas de
-                        ingeniería para sistemas confiables y mantenibles.</p>
-                </article>
-
-                <!-- Social Media -->
-                <article class="card">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <!-- Chat -->
-                        <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Social Media</h3>
-                    <p class="card-text">Estrategia, calendario editorial y community management. Contenido orientado a
-                        objetivos y crecimiento orgánico sostenido.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider bottom-wave" aria-hidden="true"></div>
-
-    <!-- Acerca de -->
-    <section id="about" class="section bg-slate-50">
-        <div class="container">
-            <h2 class="section-title">Acerca de Digitus</h2>
-            <div class="mt-6 grid gap-8 md:grid-cols-2">
-                <p class="text-slate-700 leading-relaxed">Somos un equipo multidisciplinario que combina negocio y
-                    tecnología para diseñar, construir y operar soluciones digitales alineadas a tus metas. Priorizamos
-                    el entendimiento del contexto, la comunicación clara y la entrega constante de resultados.</p>
-                <ul class="space-y-3 text-slate-700">
-                    <li class="flex items-start gap-3"><span class="check">✓</span><span>Enfoque consultivo y
-                            colaborativo</span></li>
-                    <li class="flex items-start gap-3"><span class="check">✓</span><span>Métricas, calidad y seguridad
-                            desde el inicio</span></li>
-                    <li class="flex items-start gap-3"><span class="check">✓</span><span>Equipo ágil con procesos
-                            ligeros</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider top-wave" aria-hidden="true"></div>
-
-    <!-- Diseño Web -->
-    <section id="design" class="section">
-        <div class="container">
-            <h2 class="section-title">Diseño web</h2>
-            <p class="section-subtitle">Experiencias rápidas, accesibles y enfocadas en conversión.</p>
-            <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path
-                                d="M3 5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25V9H3V5.25zM3 10.5h18v8.25A2.25 2.25 0 0118.75 21H5.25A2.25 2.25 0 013 18.75V10.5z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">UI/UX</h3>
-                    <p class="card-text">Arquitectura de información, wireframes y sistemas de diseño consistentes.</p>
-                </div>
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path
-                                d="M4.5 6A1.5 1.5 0 016 4.5h12A1.5 1.5 0 0119.5 6v12A1.5 1.5 0 0118 19.5H6A1.5 1.5 0 014.5 18V6z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Responsive</h3>
-                    <p class="card-text">Diseños fluidos, optimizados para móviles y escritorios de alto rendimiento.
-                    </p>
-                </div>
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path
-                                d="M12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zm2.47 5.28a.75.75 0 111.06 1.06L12.06 13.56a.75.75 0 01-1.06 0L8.47 11.03a.75.75 0 111.06-1.06l1.5 1.5 3.44-3.44z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">SEO técnico</h3>
-                    <p class="card-text">Core Web Vitals, accesibilidad y marcado semántico para mejorar rankings.</p>
+        <!-- Acerca de -->
+        <section id="about" class="section bg-slate-50">
+            <div class="container">
+                <h2 class="section-title">Acerca de Digitus</h2>
+                <div class="mt-6 grid gap-8 md:grid-cols-2">
+                    <p class="text-slate-700 leading-relaxed">Somos un equipo multidisciplinario que combina negocio y
+                        tecnología para diseñar, construir y operar soluciones digitales alineadas a tus metas.
+                        Priorizamos
+                        el entendimiento del contexto, la comunicación clara y la entrega constante de resultados.</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start gap-3"><span class="check">✓</span><span>Enfoque consultivo y
+                                colaborativo</span></li>
+                        <li class="flex items-start gap-3"><span class="check">✓</span><span>Métricas, calidad y
+                                seguridad
+                                desde el inicio</span></li>
+                        <li class="flex items-start gap-3"><span class="check">✓</span><span>Equipo ágil con procesos
+                                ligeros</span></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="section-divider bottom-wave" aria-hidden="true"></div>
+        <div class="section-divider top-wave" aria-hidden="true"></div>
 
-    <!-- Software -->
-    <section id="software" class="section bg-slate-50">
-        <div class="container">
-            <h2 class="section-title">Software</h2>
-            <p class="section-subtitle">Soluciones a medida con calidad de ingeniería.</p>
-            <div class="mt-10 grid gap-10 md:grid-cols-2 max-w-6xl mx-auto">
-                <!-- Left column: heading 3 + three paragraphs -->
-                <div>
-                    <h3 class="text-xl font-semibold text-slate-900">Plataformas sólidas orientadas al negocio</h3>
-                    <p class="mt-4 text-slate-700">Diseñamos y construimos software alineado a objetivos claros:
-                        ingresos, eficiencia y experiencia del cliente. Cada entrega agrega valor medible.</p>
-                    <p class="mt-4 text-slate-700">Adoptamos buenas prácticas de ingeniería: pruebas automatizadas,
-                        CI/CD, observabilidad y seguridad desde el diseño para garantizar confiabilidad.</p>
-                    <p class="mt-4 text-slate-700">Trabajamos de forma iterativa con ciclos cortos, feedback continuo y
-                        comunicación transparente para acelerar el time‑to‑value.</p>
-                </div>
-
-                <!-- Right column: 2x2 small cards -->
-                <div class="grid grid-cols-2 gap-4">
-                    <article class="card card-sm">
+        <!-- Diseño Web -->
+        <section id="design" class="section">
+            <div class="container">
+                <h2 class="section-title">Diseño web</h2>
+                <p class="section-subtitle">Experiencias rápidas, accesibles y enfocadas en conversión.</p>
+                <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+                    <div class="card p-6">
                         <div class="card-icon bg-brand-50 text-brand-700">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="icon-lg">
                                 <path
-                                    d="M6.75 3A1.75 1.75 0 005 4.75v14.5A1.75 1.75 0 006.75 21h10.5A1.75 1.75 0 0019 19.25V4.75A1.75 1.75 0 0017.25 3H6.75zM8 6.5h8v1.5H8V6.5zM8 10h8v1.5H8V10zM8 13.5h8V15H8v-1.5z" />
+                                    d="M3 5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25V9H3V5.25zM3 10.5h18v8.25A2.25 2.25 0 0118.75 21H5.25A2.25 2.25 0 013 18.75V10.5z" />
                             </svg>
                         </div>
-                        <h4 class="mt-3 font-semibold text-slate-900">APIs</h4>
-                        <p class="text-sm text-slate-600 mt-1">REST/GraphQL seguras y documentadas.</p>
-                    </article>
-                    <article class="card card-sm">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path
-                                    d="M12 2.25l9.75 5.625V16.5L12 22.125 2.25 16.5V7.875L12 2.25zm0 3.375L5.25 9l6.75 3.375L18.75 9 12 5.625z" />
-                            </svg>
-                        </div>
-                        <h4 class="mt-3 font-semibold text-slate-900">Arquitectura</h4>
-                        <p class="text-sm text-slate-600 mt-1">Patrones y escalabilidad con seguridad.</p>
-                    </article>
-                    <article class="card card-sm">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path d="M4.5 5.25h15v13.5h-15V5.25zm3 3v7.5h9V8.25h-9z" />
-                            </svg>
-                        </div>
-                        <h4 class="mt-3 font-semibold text-slate-900">Automatización</h4>
-                        <p class="text-sm text-slate-600 mt-1">Integraciones y workflows sin fricción.</p>
-                    </article>
-                    <article class="card card-sm">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path
-                                    d="M4.5 6.75A2.25 2.25 0 016.75 4.5h10.5A2.25 2.25 0 0119.5 6.75v10.5A2.25 2.25 0 0117.25 19.5H6.75A2.25 2.25 0 014.5 17.25V6.75zM8.25 8.25h7.5v7.5h-7.5v-7.5z" />
-                            </svg>
-                        </div>
-                        <h4 class="mt-3 font-semibold text-slate-900">Monitoreo</h4>
-                        <p class="text-sm text-slate-600 mt-1">Logs, métricas y alertas en tiempo real.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider top-wave" aria-hidden="true"></div>
-
-    <!-- E-learning / Moodle -->
-    <section id="elearning" class="section">
-        <div class="container">
-            <h2 class="section-title">E‑learning (Moodle)</h2>
-            <p class="section-subtitle">Contenido y plataformas para potenciar el aprendizaje.</p>
-            <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path d="M12 3l9 3-9 3-9-3 9-3zm0 7.5l9-3V15l-9 3-9-3V7.5l9 3z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Diseño instruccional</h3>
-                    <p class="card-text">Rutas de aprendizaje, micro‑lecciones y evaluación continua.</p>
-                </div>
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path
-                                d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM7.5 7.5h9v3h-9v-3zM7.5 12.75h6v3h-6v-3z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Plataforma Moodle</h3>
-                    <p class="card-text">Instalación, personalización, analítica y soporte continuo.</p>
-                </div>
-                <div class="card p-6">
-                    <div class="card-icon bg-brand-50 text-brand-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-lg">
-                            <path
-                                d="M12 5.25a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zm-2.25 6.75a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Contenido multimedia</h3>
-                    <p class="card-text">Guiones, video, evaluaciones y certificación centrados en resultados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider bottom-wave" aria-hidden="true"></div>
-
-    <!-- Proceso -->
-    <section id="process" class="section">
-        <div class="container">
-            <h2 class="section-title">Proceso</h2>
-            <div class="mt-10 grid gap-6 md:grid-cols-4">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Descubrimiento</h3>
-                    <p class="step-text">Entendemos objetivos, indicadores y restricciones para diseñar la estrategia y
-                        el roadmap.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Diseño</h3>
-                    <p class="step-text">Arquitectura, experiencia y contenido orientados a conversión y escalabilidad.
-                    </p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Construcción</h3>
-                    <p class="step-text">Desarrollo iterativo con calidad, pruebas, CI/CD y despliegues predecibles.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Evolución</h3>
-                    <p class="step-text">Medimos impacto, aprendemos y optimizamos con ciclos de mejora continua.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tecnologías -->
-    <section id="tech" class="section bg-slate-50">
-        <div class="container">
-            <h2 class="section-title">Tecnologías</h2>
-            <p class="section-subtitle">Seleccionamos herramientas modernas y confiables según el contexto de tu
-                negocio.</p>
-            <div class="mt-8 flex flex-wrap gap-3">
-                <span class="tech-chip">Tailwind CSS</span>
-                <span class="tech-chip">JavaScript</span>
-                <span class="tech-chip">WordPress</span>
-                <span class="tech-chip">Moodle</span>
-                <span class="tech-chip">Node.js</span>
-                <span class="tech-chip">CI/CD</span>
-                <span class="tech-chip">SEO Técnico</span>
-                <span class="tech-chip">Analítica</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="grid md:grid-cols-5 gap-8 items-start">
-                <div class="md:col-span-2">
-                    <h2 id="contact-title" class="section-title">Contacto</h2>
-                    <p class="mt-4 text-slate-600">Cuéntanos sobre tus objetivos y te enviaremos una propuesta a medida.
-                    </p>
-                    <div class="mt-6 space-y-3 text-slate-700">
-                        <p class="flex items-center gap-2">
-                            <!-- Envelope -->
-                            <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                            <span>hola@digitus.dev</span>
+                        <h3 class="card-title">UI/UX</h3>
+                        <p class="card-text">Arquitectura de información, wireframes y sistemas de diseño consistentes.
                         </p>
-                        <p class="flex items-center gap-2">
-                            <!-- Map Pin -->
-                            <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </div>
+                    <div class="card p-6">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-lg">
+                                <path
+                                    d="M4.5 6A1.5 1.5 0 016 4.5h12A1.5 1.5 0 0119.5 6v12A1.5 1.5 0 0118 19.5H6A1.5 1.5 0 014.5 18V6z" />
                             </svg>
-                            <span>Remoto • LATAM / USA / EU</span>
+                        </div>
+                        <h3 class="card-title">Responsive</h3>
+                        <p class="card-text">Diseños fluidos, optimizados para móviles y escritorios de alto
+                            rendimiento.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-lg">
+                                <path
+                                    d="M12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zm2.47 5.28a.75.75 0 111.06 1.06L12.06 13.56a.75.75 0 01-1.06 0L8.47 11.03a.75.75 0 111.06-1.06l1.5 1.5 3.44-3.44z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">SEO técnico</h3>
+                        <p class="card-text">Core Web Vitals, accesibilidad y marcado semántico para mejorar rankings.
                         </p>
                     </div>
                 </div>
-                <form id="contact-form" class="md:col-span-3 card p-6" role="form" aria-labelledby="contact-title">
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div>
-                            <label for="name" class="form-label">Nombre</label>
-                            <input id="name" name="name" type="text" class="form-input" placeholder="Tu nombre"
-                                required />
-                        </div>
-                        <div>
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" name="email" type="email" class="form-input"
-                                placeholder="tucorreo@empresa.com" required />
-                        </div>
-                        <div class="sm:col-span-2">
-                            <label for="company" class="form-label">Empresa</label>
-                            <input id="company" name="company" type="text" class="form-input"
-                                placeholder="Nombre de tu empresa" />
-                        </div>
-                        <div class="sm:col-span-2">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" class="form-input"
-                                placeholder="Cuéntanos sobre tus objetivos y contexto" required></textarea>
-                        </div>
-                    </div>
-                    <div class="mt-6 flex items-center gap-4">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                        <p id="form-status" class="text-sm text-slate-600"></p>
-                    </div>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <div class="section-divider bottom-wave" aria-hidden="true"></div>
+
+        <!-- Software -->
+        <section id="software" class="section bg-slate-50">
+            <div class="container">
+                <h2 class="section-title">Software</h2>
+                <p class="section-subtitle">Soluciones a medida con calidad de ingeniería.</p>
+                <div class="mt-10 grid gap-10 md:grid-cols-2 max-w-6xl mx-auto">
+                    <!-- Left column: heading 3 + three paragraphs -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-900">Plataformas sólidas orientadas al negocio</h3>
+                        <p class="mt-4 text-slate-700">Diseñamos y construimos software alineado a objetivos claros:
+                            ingresos, eficiencia y experiencia del cliente. Cada entrega agrega valor medible.</p>
+                        <p class="mt-4 text-slate-700">Adoptamos buenas prácticas de ingeniería: pruebas automatizadas,
+                            CI/CD, observabilidad y seguridad desde el diseño para garantizar confiabilidad.</p>
+                        <p class="mt-4 text-slate-700">Trabajamos de forma iterativa con ciclos cortos, feedback
+                            continuo y
+                            comunicación transparente para acelerar el time‑to‑value.</p>
+                    </div>
+
+                    <!-- Right column: 2x2 small cards -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <article class="card card-sm">
+                            <div class="card-icon bg-brand-50 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path
+                                        d="M6.75 3A1.75 1.75 0 005 4.75v14.5A1.75 1.75 0 006.75 21h10.5A1.75 1.75 0 0019 19.25V4.75A1.75 1.75 0 0017.25 3H6.75zM8 6.5h8v1.5H8V6.5zM8 10h8v1.5H8V10zM8 13.5h8V15H8v-1.5z" />
+                                </svg>
+                            </div>
+                            <h4 class="mt-3 font-semibold text-slate-900">APIs</h4>
+                            <p class="text-sm text-slate-600 mt-1">REST/GraphQL seguras y documentadas.</p>
+                        </article>
+                        <article class="card card-sm">
+                            <div class="card-icon bg-brand-50 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path
+                                        d="M12 2.25l9.75 5.625V16.5L12 22.125 2.25 16.5V7.875L12 2.25zm0 3.375L5.25 9l6.75 3.375L18.75 9 12 5.625z" />
+                                </svg>
+                            </div>
+                            <h4 class="mt-3 font-semibold text-slate-900">Arquitectura</h4>
+                            <p class="text-sm text-slate-600 mt-1">Patrones y escalabilidad con seguridad.</p>
+                        </article>
+                        <article class="card card-sm">
+                            <div class="card-icon bg-brand-50 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path d="M4.5 5.25h15v13.5h-15V5.25zm3 3v7.5h9V8.25h-9z" />
+                                </svg>
+                            </div>
+                            <h4 class="mt-3 font-semibold text-slate-900">Automatización</h4>
+                            <p class="text-sm text-slate-600 mt-1">Integraciones y workflows sin fricción.</p>
+                        </article>
+                        <article class="card card-sm">
+                            <div class="card-icon bg-brand-50 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="icon-lg">
+                                    <path
+                                        d="M4.5 6.75A2.25 2.25 0 016.75 4.5h10.5A2.25 2.25 0 0119.5 6.75v10.5A2.25 2.25 0 0117.25 19.5H6.75A2.25 2.25 0 014.5 17.25V6.75zM8.25 8.25h7.5v7.5h-7.5v-7.5z" />
+                                </svg>
+                            </div>
+                            <h4 class="mt-3 font-semibold text-slate-900">Monitoreo</h4>
+                            <p class="text-sm text-slate-600 mt-1">Logs, métricas y alertas en tiempo real.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider top-wave" aria-hidden="true"></div>
+
+        <!-- E-learning / Moodle -->
+        <section id="elearning" class="section">
+            <div class="container">
+                <h2 class="section-title">E‑learning (Moodle)</h2>
+                <p class="section-subtitle">Contenido y plataformas para potenciar el aprendizaje.</p>
+                <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+                    <div class="card p-6">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-lg">
+                                <path d="M12 3l9 3-9 3-9-3 9-3zm0 7.5l9-3V15l-9 3-9-3V7.5l9 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Diseño instruccional</h3>
+                        <p class="card-text">Rutas de aprendizaje, micro‑lecciones y evaluación continua.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-lg">
+                                <path
+                                    d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM7.5 7.5h9v3h-9v-3zM7.5 12.75h6v3h-6v-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Plataforma Moodle</h3>
+                        <p class="card-text">Instalación, personalización, analítica y soporte continuo.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="card-icon bg-brand-50 text-brand-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="icon-lg">
+                                <path
+                                    d="M12 5.25a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zm-2.25 6.75a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Contenido multimedia</h3>
+                        <p class="card-text">Guiones, video, evaluaciones y certificación centrados en resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider bottom-wave" aria-hidden="true"></div>
+
+        <!-- Proceso -->
+        <section id="process" class="section">
+            <div class="container">
+                <h2 class="section-title">Proceso</h2>
+                <div class="mt-10 grid gap-6 md:grid-cols-4">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Descubrimiento</h3>
+                        <p class="step-text">Entendemos objetivos, indicadores y restricciones para diseñar la
+                            estrategia y
+                            el roadmap.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Diseño</h3>
+                        <p class="step-text">Arquitectura, experiencia y contenido orientados a conversión y
+                            escalabilidad.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Construcción</h3>
+                        <p class="step-text">Desarrollo iterativo con calidad, pruebas, CI/CD y despliegues predecibles.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Evolución</h3>
+                        <p class="step-text">Medimos impacto, aprendemos y optimizamos con ciclos de mejora continua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section id="tech" class="section bg-slate-50">
+            <div class="container">
+                <h2 class="section-title">Tecnologías</h2>
+                <p class="section-subtitle">Seleccionamos herramientas modernas y confiables según el contexto de tu
+                    negocio.</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <span class="tech-chip">Tailwind CSS</span>
+                    <span class="tech-chip">JavaScript</span>
+                    <span class="tech-chip">WordPress</span>
+                    <span class="tech-chip">Moodle</span>
+                    <span class="tech-chip">Node.js</span>
+                    <span class="tech-chip">CI/CD</span>
+                    <span class="tech-chip">SEO Técnico</span>
+                    <span class="tech-chip">Analítica</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="grid md:grid-cols-5 gap-8 items-start">
+                    <div class="md:col-span-2">
+                        <h2 id="contact-title" class="section-title">Contacto</h2>
+                        <p class="mt-4 text-slate-600">Cuéntanos sobre tus objetivos y te enviaremos una propuesta a
+                            medida.
+                        </p>
+                        <div class="mt-6 space-y-3 text-slate-700">
+                            <p class="flex items-center gap-2">
+                                <!-- Envelope -->
+                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>hola@digitus.dev</span>
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <!-- Map Pin -->
+                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Remoto • LATAM / USA / EU</span>
+                            </p>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="md:col-span-3 card p-6" role="form" aria-labelledby="contact-title">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="form-label">Nombre</label>
+                                <input id="name" name="name" type="text" class="form-input" placeholder="Tu nombre"
+                                    required />
+                            </div>
+                            <div>
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" name="email" type="email" class="form-input"
+                                    placeholder="tucorreo@empresa.com" required />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="company" class="form-label">Empresa</label>
+                                <input id="company" name="company" type="text" class="form-input"
+                                    placeholder="Nombre de tu empresa" />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" class="form-input"
+                                    placeholder="Cuéntanos sobre tus objetivos y contexto" required></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center gap-4">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <p id="form-status" class="text-sm text-slate-600"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/18096171000?text=Hola%20Digitus,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+       aria-label="Contactar por WhatsApp">
+        <!-- WhatsApp Icon -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
 
     <!-- Footer -->
     <footer class="border-t border-slate-200" role="contentinfo">
