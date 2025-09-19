@@ -13,8 +13,12 @@ function init_mobile_menu() {
   const button = document.getElementById("mobile-menu-button");
   const menu = document.getElementById("mobile-menu");
   if (!button || !menu) return;
+  
   button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
     menu.classList.toggle("hidden");
+    button.setAttribute("aria-expanded", !isExpanded);
+    button.setAttribute("aria-label", isExpanded ? "Abrir menú" : "Cerrar menú");
   });
 }
 
@@ -46,6 +50,7 @@ function init_contact_form() {
     status.textContent = "Enviando…";
     status.classList.remove("text-red-600");
     status.classList.add("text-slate-600");
+    status.setAttribute("aria-live", "polite");
 
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
@@ -55,6 +60,7 @@ function init_contact_form() {
       status.textContent = "Por favor completa los campos requeridos.";
       status.classList.remove("text-slate-600");
       status.classList.add("text-red-600");
+      status.setAttribute("aria-live", "assertive");
       return;
     }
 
@@ -62,11 +68,13 @@ function init_contact_form() {
       // Demo: simulate async submit
       await new Promise((resolve) => setTimeout(resolve, 800));
       status.textContent = "Gracias. Te contactaremos en breve.";
+      status.setAttribute("aria-live", "polite");
       form.reset();
     } catch (err) {
       status.textContent = "Ocurrió un error. Intenta nuevamente.";
       status.classList.remove("text-slate-600");
       status.classList.add("text-red-600");
+      status.setAttribute("aria-live", "assertive");
     }
   });
 }

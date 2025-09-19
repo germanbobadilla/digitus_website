@@ -56,8 +56,10 @@
 </head>
 
 <body class="antialiased text-slate-800">
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Saltar al contenido principal</a>
     <!-- Header / Nav -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="#home" class="flex items-center gap-3">
@@ -65,7 +67,7 @@
                     <img src="images/logos/logo.png" alt="Digitus" class="logo">
                     <span class="text-xl font-bold text-dark-500">Digitus</span>
                 </a>
-                <nav class="hidden md:flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-8" role="navigation" aria-label="Navegación principal">
                     <a href="#services" class="nav-link">Servicios</a>
                     <a href="#design" class="nav-link">Diseño web</a>
                     <a href="#software" class="nav-link">Software</a>
@@ -75,8 +77,8 @@
                     <a href="#tech" class="nav-link">Tecnologías</a>
                     <a href="#contact" class="btn btn-primary">Contacto</a>
                 </nav>
-                <button id="mobile-menu-button" aria-label="Abrir menú"
-                    class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-slate-100">
+                <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
+                    class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
                     <!-- Menu Icon -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -85,7 +87,7 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white" role="navigation" aria-label="Menú móvil">
             <div class="px-4 py-3 space-y-2">
                 <a href="#services" class="block nav-link">Servicios</a>
                 <a href="#design" class="block nav-link">Diseño web</a>
@@ -100,7 +102,8 @@
     </header>
 
     <!-- Hero -->
-    <section id="home" class="relative overflow-hidden">
+    <main id="main-content">
+    <section id="home" class="relative overflow-hidden" role="banner" aria-labelledby="hero-title">
         <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white pointer-events-none"></div>
         <!-- Decorative blob -->
         <svg class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] opacity-25" viewBox="0 0 200 200"
@@ -112,7 +115,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 min-h-[70vh] flex items-center">
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div>
-                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500">Transformamos empresas con
+                    <h1 id="hero-title" class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500">Transformamos empresas con
                         software, diseño y estrategia digital</h1>
                     <p class="mt-6 text-lg text-slate-600">En Digitus Business & Software Solutions impulsamos el
                         crecimiento de tu empresa con soluciones digitales: diseño web, WordPress, Moodle, desarrollo e
@@ -193,9 +196,9 @@
 
     <!-- Servicios -->
     <div class="section-divider top-wave" aria-hidden="true"></div>
-    <section id="services" class="section">
+    <section id="services" class="section" role="region" aria-labelledby="services-title">
         <div class="container">
-            <h2 class="section-title">Servicios</h2>
+            <h2 id="services-title" class="section-title">Servicios</h2>
             <p class="section-subtitle">Soluciones integrales para acelerar la transformación digital de tu empresa.</p>
 
             <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-2">
@@ -514,7 +517,7 @@
         <div class="container">
             <div class="grid md:grid-cols-5 gap-8 items-start">
                 <div class="md:col-span-2">
-                    <h2 class="section-title">Contacto</h2>
+                    <h2 id="contact-title" class="section-title">Contacto</h2>
                     <p class="mt-4 text-slate-600">Cuéntanos sobre tus objetivos y te enviaremos una propuesta a medida.
                     </p>
                     <div class="mt-6 space-y-3 text-slate-700">
@@ -535,7 +538,7 @@
                         </p>
                     </div>
                 </div>
-                <form id="contact-form" class="md:col-span-3 card p-6">
+                <form id="contact-form" class="md:col-span-3 card p-6" role="form" aria-labelledby="contact-title">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label for="name" class="form-label">Nombre</label>
@@ -566,9 +569,10 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200">
+    <footer class="border-t border-slate-200" role="contentinfo">
         <div class="container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-sm text-slate-600">© <span id="year"></span> Digitus Business & Software Solutions. Todos los
                 derechos reservados.</p>
