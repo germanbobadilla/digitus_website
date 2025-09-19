@@ -23,9 +23,8 @@ jobs:
       - name: Sync files to S3
         run: aws s3 sync . s3://digitus.com.do --delete
         
-      - name: Configure clean URLs
+      - name: Configure S3 website hosting with clean URLs
         run: |
-          # Set up clean URL redirects for HTML files
           aws s3api put-bucket-website --bucket digitus.com.do --website-configuration '{
             "IndexDocument": {"Suffix": "index.html"},
             "ErrorDocument": {"Key": "404.html"},
