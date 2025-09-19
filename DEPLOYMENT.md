@@ -6,8 +6,8 @@ This document contains the deployment configuration for the Digitus website host
 
 ### AWS Credentials
 
-**Access Key ID:** `YOUR_AWS_ACCESS_KEY_ID`  
-**Secret Access Key:** `YOUR_AWS_SECRET_ACCESS_KEY`  
+**Access Key ID:** `YOUR_AWS_ACCESS_KEY_ID`
+**Secret Access Key:** `YOUR_AWS_SECRET_ACCESS_KEY`
 **Region:** `us-east-1` (or your preferred region)
 
 > **Note:** Replace the placeholder values with your actual AWS credentials. Never commit real credentials to version control.
@@ -15,15 +15,17 @@ This document contains the deployment configuration for the Digitus website host
 ### Deployment Steps
 
 1. **Install AWS CLI**
+
    ```bash
    # macOS
    brew install awscli
-   
+
    # Or using pip
    pip install awscli
    ```
 
 2. **Configure AWS CLI**
+
    ```bash
    aws configure
    # Enter your Access Key ID and Secret Access Key when prompted
@@ -32,20 +34,23 @@ This document contains the deployment configuration for the Digitus website host
    ```
 
 3. **Create S3 Bucket** (if not already created)
+
    ```bash
    aws s3 mb s3://digitus-website --region us-east-1
    ```
 
 4. **Enable Static Website Hosting**
+
    ```bash
    aws s3 website s3://digitus-website --index-document index.html --error-document index.html
    ```
 
 5. **Upload Website Files**
+
    ```bash
    # Upload all files to S3
    aws s3 sync . s3://digitus-website --exclude "*.md" --exclude ".git/*" --exclude ".env*"
-   
+
    # Set proper content types
    aws s3 cp index.html s3://digitus-website/ --content-type "text/html"
    aws s3 cp assets/css/style.css s3://digitus-website/assets/css/ --content-type "text/css"
@@ -54,6 +59,7 @@ This document contains the deployment configuration for the Digitus website host
    ```
 
 6. **Configure S3 Bucket Policy** (for public read access)
+
    ```json
    {
      "Version": "2012-10-17",
@@ -136,6 +142,7 @@ export S3_BUCKET_NAME=digitus-website
 ### Troubleshooting
 
 **Common Issues:**
+
 - **403 Forbidden**: Check S3 bucket policy and public read permissions
 - **404 Not Found**: Verify CloudFront origin settings and error pages
 - **CORS Issues**: Add CORS configuration to S3 bucket if needed
@@ -150,5 +157,5 @@ export S3_BUCKET_NAME=digitus-website
 
 ---
 
-**Last Updated:** January 2025  
+**Last Updated:** January 2025
 **Maintained by:** Digitus Business & Software Solutions
