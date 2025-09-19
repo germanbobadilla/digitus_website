@@ -49,7 +49,7 @@
 .hidden { display: none; }
 
 /* Logo styling */
-.logo { height: 3rem; width: auto; transition: opacity 0.2s ease; }
+.logo { height: 2.5rem; width: auto; transition: opacity 0.2s ease; }
 .logo:hover { opacity: 0.8; }
 
 /* Section decorative waves */
