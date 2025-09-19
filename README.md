@@ -42,6 +42,7 @@ digitus_html/
 ## 📱 Features
 
 ### Design & UX
+
 - **Hero Section** - Prominent landing with call-to-action
 - **Responsive Layout** - Optimized for all device sizes
 - **Icon-Based Design** - No images, using scalable SVG icons
@@ -49,6 +50,7 @@ digitus_html/
 - **Smooth Scrolling** - Enhanced navigation experience
 
 ### Sections
+
 1. **Hero** - Company introduction and value proposition
 2. **Services** - Overview of all service offerings
 3. **Design Web** - UI/UX, responsive design, SEO technical
@@ -60,6 +62,7 @@ digitus_html/
 9. **Contact** - Form with validation and company details
 
 ### Functionality
+
 - **Mobile Menu** - Collapsible navigation for mobile devices
 - **Form Validation** - Client-side validation for contact form
 - **Smooth Scrolling** - Animated navigation between sections
@@ -68,12 +71,15 @@ digitus_html/
 ## 🚀 Deployment
 
 ### AWS S3 + CloudFront
+
 The website is deployed using:
+
 - **AWS S3** - Static website hosting
 - **CloudFront CDN** - Global content delivery for fast loading
 - **Custom Domain** - Professional domain configuration
 
 ### Local Development
+
 1. Clone the repository
 2. Open `index.html` in a web browser
 3. Or serve locally with a simple HTTP server:
@@ -91,15 +97,18 @@ The website is deployed using:
 ## 🔧 Customization
 
 ### Styling
+
 - Modify `assets/css/style.css` for custom styles
 - Tailwind classes can be extended in the inline config in `index.html`
 
 ### Content
+
 - Update service descriptions in the respective sections
 - Modify contact information in the contact section
 - Add/remove service cards as needed
 
 ### JavaScript
+
 - Form handling logic in `assets/js/app.js`
 - Mobile menu functionality
 - Smooth scrolling implementation
@@ -107,6 +116,7 @@ The website is deployed using:
 ## 📞 Contact
 
 For questions about this website or Digitus services:
+
 - **Email**: hola@digitus.dev
 - **Location**: Remote • LATAM / USA / EU
 
