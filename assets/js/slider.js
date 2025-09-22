@@ -45,12 +45,14 @@
 
       // Controls
       this.prevBtn = document.createElement("button");
-      this.prevBtn.className = "slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-brand-600";
+      this.prevBtn.className =
+        "slider-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-brand-600";
       this.prevBtn.setAttribute("aria-label", "Anterior");
       this.prevBtn.innerHTML = svg_chevron_left();
 
       this.nextBtn = document.createElement("button");
-      this.nextBtn.className = "slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-brand-600";
+      this.nextBtn.className =
+        "slider-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-brand-600";
       this.nextBtn.setAttribute("aria-label", "Siguiente");
       this.nextBtn.innerHTML = svg_chevron_right();
 
@@ -59,10 +61,12 @@
 
       // Dots
       this.dotsWrap = document.createElement("div");
-      this.dotsWrap.className = "slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2";
+      this.dotsWrap.className =
+        "slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2";
       this.dots = this.slides.map((_, i) => {
         const dot = document.createElement("button");
-        dot.className = "w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-600";
+        dot.className =
+          "w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-600";
         dot.setAttribute("aria-label", `Ir al slide ${i + 1}`);
         dot.addEventListener("click", () => this.go_to(i));
         this.dotsWrap.appendChild(dot);
@@ -71,7 +75,12 @@
       this.root.appendChild(this.dotsWrap);
 
       // Basic styles for track/slides (Tailwind-compatible classes)
-      this.track.classList.add("flex", "transition-transform", "duration-500", "ease-out");
+      this.track.classList.add(
+        "flex",
+        "transition-transform",
+        "duration-500",
+        "ease-out"
+      );
       this.slides.forEach((s) => s.classList.add("min-w-full", "shrink-0"));
     }
 
@@ -103,12 +112,16 @@
       });
       // ARIA current slide
       this.slides.forEach((s, i) => {
-        s.setAttribute("aria-hidden", i === this.currentIndex ? "false" : "true");
+        s.setAttribute(
+          "aria-hidden",
+          i === this.currentIndex ? "false" : "true"
+        );
       });
     }
 
     prev() {
-      this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+      this.currentIndex =
+        (this.currentIndex - 1 + this.slides.length) % this.slides.length;
       this.update_ui();
     }
 
@@ -151,5 +164,3 @@
     });
   });
 })();
-
-
