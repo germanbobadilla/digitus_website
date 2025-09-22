@@ -28,6 +28,7 @@ node_modules/
 # Build outputs
 dist/
 build/
+marketing/
 
 # Temporary files
 *.tmp

@@ -145,13 +145,6 @@
     <main id="main-content">
         <section id="home" class="relative overflow-hidden" role="banner" aria-labelledby="hero-title">
             <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white pointer-events-none"></div>
-            <!-- Decorative blob -->
-            <svg class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] opacity-30 blur-sm drop-shadow-xl"
-                viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path fill="#3b82f6"
-                    d="M49.5,-58.1C64.3,-47.1,76.7,-31.7,80.1,-14.3C83.5,3.1,77.9,22.5,67.2,38.5C56.6,54.6,40.9,67.4,23.5,73.1C6,78.7,-13.2,77.2,-31,70.1C-48.8,63.1,-65.2,50.4,-73.4,33.7C-81.7,17,-81.7,-3.6,-74.7,-20.5C-67.6,-37.4,-53.5,-50.6,-38.3,-61.8C-23.1,-73.1,-6.8,-82.4,8.6,-82.1C24,-81.8,48.6,-71.1,49.5,-58.1Z"
-                    transform="translate(100 100)" />
-            </svg>
             <!-- Floating 3D-like glass circles for depth -->
             <div class="pointer-events-none absolute -left-24 top-28 w-[420px] h-[420px] rounded-full blur-3xl"
                 aria-hidden="true"
@@ -251,7 +244,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                                 </svg>
-                                <span>Moodle</span>
+                                <span>E-learning</span>
                             </div>
                             <div class="icon-card">
                                 <!-- Chat -->
@@ -270,103 +263,80 @@
 
 
         <!-- Servicios -->
-        <div class="section-divider top-wave" aria-hidden="true"></div>
-        <section id="services" class="section" role="region" aria-labelledby="services-title">
+        <section id="services" class="section bg-gradient-to-br from-slate-50 to-blue-50" role="region"
+            aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title" class="section-title">Servicios</h2>
-                <p class="section-subtitle">Soluciones integrales para acelerar la transformación digital de tu empresa.
+                <h2 id="services-title" class="section-title">Nuestros Servicios</h2>
+                <p class="text-center text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
+                    Soluciones digitales integrales diseñadas para impulsar el crecimiento de tu empresa
                 </p>
 
-                <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-2">
+                <div class="services-grid justify-center">
                     <!-- Web design -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Paint Brush -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2a2 2 0 002-2V5a2 2 0 00-2-2z" />
-                            </svg>
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Diseño Web</h3>
+                        <p>Sitios modernos, accesibles y centrados en conversión. Arquitectura clara, velocidad óptima y
+                            diseño responsive para comunicar tu propuesta de valor.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">Diseño web</h3>
-                        <p class="card-text">Sitios modernos, accesibles y centrados en conversión. Arquitectura clara,
-                            velocidad óptima y diseño responsive para comunicar tu propuesta de valor.</p>
-                    </article>
+                    </div>
 
                     <!-- WordPress -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Globe Alt -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                            </svg>
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>WordPress</h3>
+                        <p>Sitios administrables, seguros y escalables: desarrollo de temas y plugins, optimización SEO
+                            técnico y mantenimiento continuo.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">WordPress</h3>
-                        <p class="card-text">Sitios administrables, seguros y escalables: desarrollo de temas y plugins,
-                            optimización SEO técnico y mantenimiento continuo.</p>
-                    </article>
+                    </div>
 
                     <!-- Moodle -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Academic Cap -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            </svg>
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3>Moodle</h3>
+                        <p>Implementación y personalización de plataformas e-learning. Diseño instruccional, analítica
+                            de aprendizaje e integración con sistemas existentes.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">Moodle</h3>
-                        <p class="card-text">Implementación y personalización de plataformas e-learning. Diseño
-                            instruccional, analítica de aprendizaje e integración con sistemas existentes.</p>
-                    </article>
+                    </div>
 
                     <!-- Software Development -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Code -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                            </svg>
+                    <div class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Desarrollo de Software</h3>
+                        <p>Aplicaciones a medida, APIs y automatizaciones. Calidad de código, pruebas y despliegue
+                            continuo para acelerar la entrega de valor.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">Desarrollo de software</h3>
-                        <p class="card-text">Aplicaciones a medida, APIs y automatizaciones. Calidad de código, pruebas
-                            y
-                            despliegue continuo para acelerar la entrega de valor.</p>
-                    </article>
+                    </div>
 
-                    <!-- Software Engineering -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Cog -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+                    <!-- Content Creation -->
+                    <div class="service-card">
+                        <div class="service-icon">📝</div>
+                        <h3>Creación de Contenido</h3>
+                        <p>Desarrollo de contenido educativo y corporativo: cursos online, materiales didácticos,
+                            documentación técnica y recursos multimedia para instituciones educativas y empresas.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">Ingeniería de software</h3>
-                        <p class="card-text">Arquitecturas robustas, seguridad, observabilidad y buenas prácticas de
-                            ingeniería para sistemas confiables y mantenibles.</p>
-                    </article>
+                    </div>
 
                     <!-- Social Media -->
-                    <article class="card">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <!-- Chat -->
-                            <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Social Media</h3>
+                        <p>Estrategia, calendario editorial y community management. Contenido orientado a objetivos y
+                            crecimiento orgánico sostenido.</p>
+                        <div class="mt-4">
+                            <span class="status-badge online">Disponible</span>
                         </div>
-                        <h3 class="card-title">Social Media</h3>
-                        <p class="card-text">Estrategia, calendario editorial y community management. Contenido
-                            orientado a
-                            objetivos y crecimiento orgánico sostenido.</p>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -586,10 +556,8 @@
             </div>
         </section>
 
-        <div class="section-divider top-wave" aria-hidden="true"></div>
-
         <!-- Diseño Web -->
-        <section id="design" class="section bg-design-art">
+        <section id="design" class="section">
             <div class="container">
                 <h2 class="section-title">Diseño web</h2>
                 <p class="section-subtitle">Experiencias rápidas, accesibles y enfocadas en conversión.</p>
@@ -705,45 +673,61 @@
             </div>
         </section>
 
-        <div class="section-divider top-wave" aria-hidden="true"></div>
-
         <!-- E-learning / Moodle -->
-        <section id="elearning" class="section">
-            <div class="container">
+        <section id="elearning"
+            class="section bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 relative overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div
+                    class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-200/30 to-indigo-200/30 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-200/30 to-purple-200/30 rounded-full blur-3xl">
+                </div>
+            </div>
+
+            <div class="container relative z-10">
                 <h2 class="section-title">E‑learning (Moodle)</h2>
                 <p class="section-subtitle">Contenido y plataformas para potenciar el aprendizaje.</p>
                 <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
+                    <div
+                        class="glassmorphic-card p-6 backdrop-blur-lg bg-white/20 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                        <div
+                            class="card-icon bg-gradient-to-br from-purple-100 to-indigo-100 text-purple-700 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="icon-lg">
                                 <path d="M12 3l9 3-9 3-9-3 9-3zm0 7.5l9-3V15l-9 3-9-3V7.5l9 3z" />
                             </svg>
                         </div>
-                        <h3 class="card-title">Diseño instruccional</h3>
-                        <p class="card-text">Rutas de aprendizaje, micro‑lecciones y evaluación continua.</p>
+                        <h3 class="card-title text-slate-800">Diseño instruccional</h3>
+                        <p class="card-text text-slate-600">Rutas de aprendizaje, micro‑lecciones y evaluación continua.
+                        </p>
                     </div>
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
+                    <div
+                        class="glassmorphic-card p-6 backdrop-blur-lg bg-white/20 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                        <div class="card-icon bg-gradient-to-br from-indigo-100 to-blue-100 text-indigo-700 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="icon-lg">
                                 <path
                                     d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM7.5 7.5h9v3h-9v-3zM7.5 12.75h6v3h-6v-3z" />
                             </svg>
                         </div>
-                        <h3 class="card-title">Plataforma Moodle</h3>
-                        <p class="card-text">Instalación, personalización, analítica y soporte continuo.</p>
+                        <h3 class="card-title text-slate-800">Plataforma Moodle</h3>
+                        <p class="card-text text-slate-600">Instalación, personalización, analítica y soporte continuo.
+                        </p>
                     </div>
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
+                    <div
+                        class="glassmorphic-card p-6 backdrop-blur-lg bg-white/20 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                        <div class="card-icon bg-gradient-to-br from-blue-100 to-purple-100 text-blue-700 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="icon-lg">
                                 <path
                                     d="M12 5.25a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zm-2.25 6.75a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0z" />
                             </svg>
                         </div>
-                        <h3 class="card-title">Contenido multimedia</h3>
-                        <p class="card-text">Guiones, video, evaluaciones y certificación centrados en resultados.</p>
+                        <h3 class="card-title text-slate-800">Contenido multimedia</h3>
+                        <p class="card-text text-slate-600">Guiones, video, evaluaciones y certificación centrados en
+                            resultados.</p>
                     </div>
                 </div>
             </div>
@@ -758,407 +742,26 @@
                 <p class="section-subtitle">Metodologías probadas y estándares de la industria para garantizar la
                     excelencia en cada proyecto.</p>
 
-                <!-- Process Tabs -->
-                <div class="mt-12 flex flex-wrap justify-center gap-4 mb-12">
-                    <button
-                        class="process-tab active bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                        data-process="sdlc">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                </svg>
-                            </div>
-                            <span class="font-medium">Desarrollo de Software</span>
-                        </div>
-                    </button>
-                    <button
-                        class="process-tab bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                        data-process="addie">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <span class="font-medium">Diseño Educativo (ADDIE)</span>
-                        </div>
-                    </button>
-                    <button
-                        class="process-tab bg-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                        data-process="content">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 10h6m-6 4h6m-6 4h4" />
-                                </svg>
-                            </div>
-                            <span class="font-medium">Creación de Contenido</span>
-                        </div>
-                    </button>
+                <!-- Timeline for Software Development -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Software Development Lifecycle (SDLC)
+                    </h3>
+                    <div id="sdlc-timeline" data-timeline></div>
                 </div>
 
-                <!-- SDLC Process -->
-                <div id="sdlc" class="process-content active">
-                    <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Software Development Lifecycle (SDLC)</h3>
-                            <p class="text-slate-600">Metodología ágil para el desarrollo de software de alta calidad
-                            </p>
-                        </div>
-                        <div class="process-timeline relative">
-                            <div
-                                class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 rounded-full">
-                            </div>
-                            <div class="progress-bar absolute left-8 top-0 w-1 bg-blue-500 rounded-full h-full"
-                                style="width: 0%"></div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">1. Planificación & Análisis
-                                    </h4>
-                                    <p class="text-blue-700 mb-3">Definimos requisitos, alcance y arquitectura del
-                                        sistema</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Gathering
-                                            Requirements</span>
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Technical
-                                            Architecture</span>
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Project
-                                            Planning</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-                                    <h4 class="text-lg font-semibold text-green-900 mb-2">2. Diseño & Prototipado</h4>
-                                    <p class="text-green-700 mb-3">Creamos wireframes, mockups y prototipos interactivos
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">UI/UX
-                                            Design</span>
-                                        <span
-                                            class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Database
-                                            Design</span>
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">API
-                                            Design</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
-                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">3. Desarrollo & Testing</h4>
-                                    <p class="text-purple-700 mb-3">Implementación ágil con testing continuo y CI/CD</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Agile
-                                            Development</span>
-                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Unit
-                                            Testing</span>
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Integration
-                                            Testing</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">4. Despliegue & Monitoreo
-                                    </h4>
-                                    <p class="text-orange-700 mb-3">Deploy automatizado con monitoreo y métricas en
-                                        tiempo real</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Automated
-                                            Deployment</span>
-                                        <span
-                                            class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Performance
-                                            Monitoring</span>
-                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Error
-                                            Tracking</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
-                                    <h4 class="text-lg font-semibold text-red-900 mb-2">5. Mantenimiento & Mejora</h4>
-                                    <p class="text-red-700 mb-3">Soporte continuo, actualizaciones y optimización basada
-                                        en feedback</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Bug
-                                            Fixes</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Feature
-                                            Updates</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance
-                                            Optimization</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Timeline for Educational Design -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Modelo ADDIE para Diseño Educativo
+                    </h3>
+                    <div id="addie-timeline" data-timeline></div>
                 </div>
 
-                <!-- ADDIE Process -->
-                <div id="addie" class="process-content">
-                    <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Modelo ADDIE para Diseño Educativo</h3>
-                            <p class="text-slate-600">Metodología sistemática para crear experiencias de aprendizaje
-                                efectivas</p>
-                        </div>
-                        <div class="process-timeline relative">
-                            <div
-                                class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-green-300 rounded-full">
-                            </div>
-                            <div class="progress-bar absolute left-8 top-0 w-1 bg-green-500 rounded-full h-full"
-                                style="width: 0%"></div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-                                    <h4 class="text-lg font-semibold text-green-900 mb-2">A - Análisis</h4>
-                                    <p class="text-green-700 mb-3">Identificamos necesidades de aprendizaje, audiencia y
-                                        objetivos</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Needs
-                                            Assessment</span>
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Learner
-                                            Analysis</span>
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Goal
-                                            Setting</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">D - Diseño</h4>
-                                    <p class="text-blue-700 mb-3">Estructuramos el contenido, actividades y estrategias
-                                        de evaluación</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Content
-                                            Structure</span>
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Learning
-                                            Activities</span>
-                                        <span
-                                            class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Assessment
-                                            Design</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
-                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">D - Desarrollo</h4>
-                                    <p class="text-purple-700 mb-3">Creamos materiales, recursos multimedia y
-                                        plataformas de aprendizaje</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Content
-                                            Creation</span>
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Multimedia
-                                            Development</span>
-                                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">LMS
-                                            Integration</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">I - Implementación</h4>
-                                    <p class="text-orange-700 mb-3">Lanzamos el programa educativo con soporte y
-                                        seguimiento</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Pilot
-                                            Testing</span>
-                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">User
-                                            Training</span>
-                                        <span
-                                            class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Support
-                                            System</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
-                                    <h4 class="text-lg font-semibold text-red-900 mb-2">E - Evaluación</h4>
-                                    <p class="text-red-700 mb-3">Medimos efectividad, recopilamos feedback y optimizamos
-                                        continuamente</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance
-                                            Metrics</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Learner
-                                            Feedback</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Continuous
-                                            Improvement</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Timeline for Content Creation -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Proceso de Creación de Contenido</h3>
+                    <div id="content-timeline" data-timeline></div>
                 </div>
 
-                <!-- Content Creation Process -->
-                <div id="content" class="process-content">
-                    <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-2">Proceso de Creación de Contenido</h3>
-                            <p class="text-slate-600">Metodología estratégica para contenido digital efectivo y
-                                optimizado</p>
-                        </div>
-                        <div class="process-timeline relative">
-                            <div
-                                class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-purple-300 rounded-full">
-                            </div>
-                            <div class="progress-bar absolute left-8 top-0 w-1 bg-purple-500 rounded-full h-full"
-                                style="width: 0%"></div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
-                                    <h4 class="text-lg font-semibold text-purple-900 mb-2">1. Investigación & Estrategia
-                                    </h4>
-                                    <p class="text-purple-700 mb-3">Analizamos audiencia, competencia y definimos
-                                        estrategia de contenido</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Audience
-                                            Research</span>
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Competitor
-                                            Analysis</span>
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Content
-                                            Strategy</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">2. Planificación & Calendario
-                                    </h4>
-                                    <p class="text-blue-700 mb-3">Estructuramos temas, calendario editorial y recursos
-                                        necesarios</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Editorial
-                                            Calendar</span>
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Topic
-                                            Planning</span>
-                                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Resource
-                                            Allocation</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-                                    <h4 class="text-lg font-semibold text-green-900 mb-2">3. Creación & Producción</h4>
-                                    <p class="text-green-700 mb-3">Desarrollamos contenido multimedia, textos y
-                                        elementos visuales</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Content
-                                            Writing</span>
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Visual
-                                            Design</span>
-                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Video
-                                            Production</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16 pb-8">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <h4 class="text-lg font-semibold text-orange-900 mb-2">4. Optimización & SEO</h4>
-                                    <p class="text-orange-700 mb-3">Optimizamos para motores de búsqueda y plataformas
-                                        sociales</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">SEO
-                                            Optimization</span>
-                                        <span
-                                            class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Social
-                                            Media Optimization</span>
-                                        <span
-                                            class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Performance
-                                            Tuning</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="process-step relative pl-16">
-                                <div
-                                    class="process-icon absolute left-6 w-4 h-4 bg-red-500 rounded-full border-4 border-white shadow-lg">
-                                </div>
-                                <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
-                                    <h4 class="text-lg font-semibold text-red-900 mb-2">5. Distribución & Análisis</h4>
-                                    <p class="text-red-700 mb-3">Publicamos, distribuimos y analizamos el rendimiento
-                                        del contenido</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Multi-channel
-                                            Distribution</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Analytics
-                                            Tracking</span>
-                                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Performance
-                                            Analysis</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1329,68 +932,251 @@
         </section>
 
         <!-- Contacto -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="grid md:grid-cols-5 gap-8 items-start">
-                    <div class="md:col-span-2">
-                        <h2 id="contact-title" class="section-title">Contacto</h2>
-                        <p class="mt-4 text-slate-600">Cuéntanos sobre tus objetivos y te enviaremos una propuesta a
-                            medida.
-                        </p>
-                        <div class="mt-6 space-y-3 text-slate-700">
-                            <p class="flex items-center gap-2">
-                                <!-- Envelope -->
-                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                <span>info@digitus.com.do</span>
+        <section id="contact"
+            class="section bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div
+                    class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-200/30 to-blue-200/30 rounded-full blur-3xl">
+                </div>
+            </div>
+
+            <div class="container relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">¿Listo para Transformar tu Negocio?</h2>
+                    <p class="section-subtitle max-w-3xl mx-auto">
+                        Cuéntanos sobre tu proyecto y te enviaremos una propuesta personalizada en menos de 24 horas.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Contact Info & CTA -->
+                    <div class="space-y-8">
+                        <div class="glassmorphic-card p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Hablemos de tu Proyecto</h3>
+                            <p class="text-slate-600 mb-6">
+                                Desde desarrollo de software hasta estrategias digitales, estamos aquí para hacer
+                                realidad tu visión.
                             </p>
-                            <p class="flex items-center gap-2">
-                                <!-- Map Pin -->
-                                <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3 text-slate-700">
+                                    <div
+                                        class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Email</p>
+                                        <p class="text-sm text-slate-600">info@digitus.com.do</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3 text-slate-700">
+                                    <div
+                                        class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">WhatsApp</p>
+                                        <p class="text-sm text-slate-600">+1 (809) 617-1000</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3 text-slate-700">
+                                    <div
+                                        class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Ubicación</p>
+                                        <p class="text-sm text-slate-600">Santo Domingo, República Dominicana</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="space-y-4">
+                            <button id="open-contact-modal"
+                                class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                💬 Enviar Mensaje
+                            </button>
+
+                            <a href="https://wa.me/18096171000?text=Hola%20Digitus,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios"
+                                target="_blank" rel="noopener noreferrer"
+                                class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                                 </svg>
-                                <span>Santo Domingo, Distrito Nacional, República Dominicana</span>
-                            </p>
+                                WhatsApp Directo
+                            </a>
                         </div>
                     </div>
-                    <form id="contact-form" class="md:col-span-3 card p-6" role="form" aria-labelledby="contact-title">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="name" class="form-label">Nombre</label>
-                                <input id="name" name="name" type="text" class="form-input" placeholder="Tu nombre"
-                                    required />
-                            </div>
-                            <div>
-                                <label for="email" class="form-label">Email</label>
-                                <input id="email" name="email" type="email" class="form-input"
-                                    placeholder="tucorreo@empresa.com" required />
-                            </div>
-                            <div class="sm:col-span-2">
-                                <label for="company" class="form-label">Empresa</label>
-                                <input id="company" name="company" type="text" class="form-input"
-                                    placeholder="Nombre de tu empresa" />
-                            </div>
-                            <div class="sm:col-span-2">
-                                <label for="message" class="form-label">Mensaje</label>
-                                <textarea id="message" name="message" rows="5" class="form-input"
-                                    placeholder="Cuéntanos sobre tus objetivos y contexto" required></textarea>
+
+                    <!-- Trust Indicators -->
+                    <div class="space-y-6">
+                        <div class="glassmorphic-card p-6">
+                            <h4 class="text-lg font-semibold text-slate-800 mb-4">¿Por qué elegirnos?</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-700">Respuesta en menos de 24 horas</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-700">Propuesta personalizada y gratuita</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-700">Consultoría inicial sin compromiso</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-700">Soporte técnico continuo</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-4">
-                            <button type="submit" class="btn btn-primary">Abrir mi email</button>
-                            <p id="form-status" class="text-sm text-slate-600"></p>
+
+                        <div class="glassmorphic-card p-6">
+                            <h4 class="text-lg font-semibold text-slate-800 mb-4">Nuestros Clientes Confían en Nosotros
+                            </h4>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="p-4 bg-white/50 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">50+</div>
+                                    <div class="text-sm text-slate-600">Proyectos Completados</div>
+                                </div>
+                                <div class="p-4 bg-white/50 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">100%</div>
+                                    <div class="text-sm text-slate-600">Satisfacción</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div id="contact-modal"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 rounded-t-2xl">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-2xl font-bold text-slate-800">Envíanos un Mensaje</h3>
+                        <button id="close-contact-modal"
+                            class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <form id="contact-form" class="space-y-6" role="form" aria-labelledby="contact-title">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="modal-name" class="block text-sm font-medium text-slate-700 mb-2">Nombre
+                                    *</label>
+                                <input id="modal-name" name="name" type="text"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                    placeholder="Tu nombre completo" required />
+                            </div>
+                            <div>
+                                <label for="modal-email" class="block text-sm font-medium text-slate-700 mb-2">Email
+                                    *</label>
+                                <input id="modal-email" name="email" type="email"
+                                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                    placeholder="tucorreo@empresa.com" required />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="modal-company"
+                                class="block text-sm font-medium text-slate-700 mb-2">Empresa</label>
+                            <input id="modal-company" name="company" type="text"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                placeholder="Nombre de tu empresa" />
+                        </div>
+
+                        <div>
+                            <label for="modal-service" class="block text-sm font-medium text-slate-700 mb-2">Servicio de
+                                Interés</label>
+                            <select id="modal-service" name="service"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="web-design">Diseño Web</option>
+                                <option value="wordpress">WordPress</option>
+                                <option value="moodle">Moodle / E-learning</option>
+                                <option value="software">Desarrollo de Software</option>
+                                <option value="content">Creación de Contenido</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="consulting">Consultoría Digital</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="modal-message" class="block text-sm font-medium text-slate-700 mb-2">Mensaje
+                                *</label>
+                            <textarea id="modal-message" name="message" rows="5"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
+                                placeholder="Cuéntanos sobre tu proyecto, objetivos y cualquier detalle que consideres importante..."
+                                required></textarea>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <button type="submit"
+                                class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                                📧 Abrir mi Email
+                            </button>
+                            <p id="modal-form-status" class="text-sm text-slate-600"></p>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Floating WhatsApp Button -->
@@ -1422,6 +1208,8 @@
 
     <script src="/assets/js/app.js"></script>
     <script src="/assets/js/processes.js"></script>
+    <script src="/assets/js/timeline.js"></script>
+    <script src="/assets/js/init-timelines.js"></script>
     <!-- Slider only on dev while testing -->
     <script src="/assets/js/slider.js"></script>
     <script src="/assets/js/consent.js"></script>
