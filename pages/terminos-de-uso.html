@@ -8,6 +8,20 @@
     <meta name="description"
         content="Términos y condiciones de uso de los servicios de Digitus Business & Software Solutions, incluyendo plataformas web, aplicaciones y servicios educativos.">
     <link rel="icon" type="image/png" href="../images/logos/fav-48.png" />
+    <script>
+        // Google Consent Mode v2 defaults (must run before any measurement tags)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'wait_for_update': 500
+        });
+        gtag('set', 'url_passthrough', true);
+        gtag('set', 'ads_data_redaction', true);
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -303,6 +317,7 @@
     </footer>
 
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/consent.js"></script>
     <script>
         // Set current date
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', {

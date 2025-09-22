@@ -37,17 +37,34 @@
   }
 
   function save_preferences(prefs) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      version: 1,
-      timestamp: Date.now(),
-      ...prefs,
-    }));
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        timestamp: Date.now(),
+        ...prefs,
+      })
+    );
+    // Update Google Consent Mode v2 if available
+    try {
+      if (typeof gtag === "function") {
+        gtag('consent', 'update', {
+          'ad_storage': prefs && prefs.marketing ? 'granted' : 'denied',
+          'ad_user_data': prefs && prefs.marketing ? 'granted' : 'denied',
+          'ad_personalization': prefs && prefs.marketing ? 'granted' : 'denied',
+          'analytics_storage': prefs && prefs.analytics ? 'granted' : 'denied'
+        });
+      }
+    } catch (_) {
+      // ignore
+    }
   }
 
   function render_consent_banner() {
     const banner = document.createElement("div");
     banner.id = "consent-banner";
-    banner.className = "fixed inset-x-0 bottom-0 z-[60] bg-white/95 backdrop-blur border-t border-slate-200";
+    banner.className =
+      "fixed inset-x-0 bottom-0 z-[60] bg-white/95 backdrop-blur border-t border-slate-200";
     banner.setAttribute("role", "dialog");
     banner.setAttribute("aria-label", "Preferencias de privacidad");
 
@@ -120,7 +137,8 @@
 
     modal = document.createElement("div");
     modal.id = "consent-modal";
-    modal.className = "fixed inset-0 z-[70] flex items-end sm:items-center justify-center";
+    modal.className =
+      "fixed inset-0 z-[70] flex items-end sm:items-center justify-center";
     modal.setAttribute("role", "dialog");
     modal.setAttribute("aria-modal", "true");
     modal.innerHTML = `
@@ -140,7 +158,9 @@
             </label>
 
             <label class="flex items-start gap-3">
-              <input id="consent-analytics" type="checkbox" class="mt-1" ${current.analytics ? "checked" : ""}>
+              <input id="consent-analytics" type="checkbox" class="mt-1" ${
+                current.analytics ? "checked" : ""
+              }>
               <span>
                 <span class="font-medium text-slate-800">Analítica</span>
                 <span class="block text-sm text-slate-600">Ayuda a entender el uso del sitio para mejorarlo.</span>
@@ -148,7 +168,9 @@
             </label>
 
             <label class="flex items-start gap-3">
-              <input id="consent-performance" type="checkbox" class="mt-1" ${current.performance ? "checked" : ""}>
+              <input id="consent-performance" type="checkbox" class="mt-1" ${
+                current.performance ? "checked" : ""
+              }>
               <span>
                 <span class="font-medium text-slate-800">Rendimiento</span>
                 <span class="block text-sm text-slate-600">Optimiza la velocidad y la experiencia del usuario.</span>
@@ -156,7 +178,9 @@
             </label>
 
             <label class="flex items-start gap-3">
-              <input id="consent-marketing" type="checkbox" class="mt-1" ${current.marketing ? "checked" : ""}>
+              <input id="consent-marketing" type="checkbox" class="mt-1" ${
+                current.marketing ? "checked" : ""
+              }>
               <span>
                 <span class="font-medium text-slate-800">Marketing</span>
                 <span class="block text-sm text-slate-600">Permite personalización y mensajes comerciales relevantes.</span>
@@ -176,9 +200,15 @@
 
     const onCancel = () => close_modal();
     const onSave = () => {
-      const analytics = /** @type {HTMLInputElement|null} */ (document.getElementById("consent-analytics"));
-      const performance = /** @type {HTMLInputElement|null} */ (document.getElementById("consent-performance"));
-      const marketing = /** @type {HTMLInputElement|null} */ (document.getElementById("consent-marketing"));
+      const analytics = /** @type {HTMLInputElement|null} */ (
+        document.getElementById("consent-analytics")
+      );
+      const performance = /** @type {HTMLInputElement|null} */ (
+        document.getElementById("consent-performance")
+      );
+      const marketing = /** @type {HTMLInputElement|null} */ (
+        document.getElementById("consent-marketing")
+      );
       save_preferences({
         essential: true,
         analytics: !!(analytics && analytics.checked),
@@ -189,11 +219,15 @@
       dismiss_banner();
     };
 
-    document.getElementById("consent-cancel")?.addEventListener("click", onCancel);
+    document
+      .getElementById("consent-cancel")
+      ?.addEventListener("click", onCancel);
     document.getElementById("consent-save")?.addEventListener("click", onSave);
 
     // Close on backdrop click
-    modal.querySelector(".absolute.inset-0")?.addEventListener("click", onCancel);
+    modal
+      .querySelector(".absolute.inset-0")
+      ?.addEventListener("click", onCancel);
 
     // Esc to close
     document.addEventListener("keydown", handle_escape_once, { once: true });
@@ -210,5 +244,3 @@
     if (modal) modal.remove();
   }
 })();
-
-
