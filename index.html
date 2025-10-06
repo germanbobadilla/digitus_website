@@ -30,45 +30,9 @@
         };
         !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
     </script> -->
-    <script type='text/javascript' src='https://widget.freshworks.com/widgets/158000000607.js' async defer></script>
-    <!-- Tailwind CSS CDN (for rapid development and scalability) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Tailwind config (extend as project grows)
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f2ff',
-                            100: '#e6ebff',
-                            200: '#d1d9ff',
-                            300: '#a8b8ff',
-                            400: '#7c8cff',
-                            500: '#5271ff',
-                            600: '#3d5bff',
-                            700: '#2d47ff',
-                            800: '#1f3ae8',
-                            900: '#1a2bb8'
-                        },
-                        dark: {
-                            50: '#f0f2ff',
-                            100: '#e6ebff',
-                            200: '#d1d9ff',
-                            300: '#a8b8ff',
-                            400: '#7c8cff',
-                            500: '#000937',
-                            600: '#00082e',
-                            700: '#000725',
-                            800: '#00061c',
-                            900: '#000513'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- <script type='text/javascript' src='https://widget.freshworks.com/widgets/158000000607.js' async defer></script> -->
+
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7NPYXZ0T4"></script>
     <script>
@@ -78,30 +42,34 @@
 
         gtag('config', 'G-D7NPYXZ0T4');
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/index.css" />
 </head>
 
-<body class="antialiased text-slate-800">
+<body class="antialiased text-slate-800 bg-white dark:text-slate-100 dark:bg-slate-900 transition-colors duration-300">
     <!-- Skip to main content link for screen readers -->
     <a href="#main-content"
         class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Saltar
         al contenido principal</a>
     <!-- Header / Nav -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200" role="banner">
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 transition-colors duration-300"
+        role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="#home" class="flex items-center gap-3">
                     <!-- Logo -->
                     <img src="images/logos/logo.png" alt="Digitus" class="logo">
-                    <span class="text-xl font-bold text-dark-500">Digitus</span>
+                    <span class="text-xl font-bold text-dark-500 dark:text-white">Digitus</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8" role="navigation" aria-label="Navegación principal">
-                    <a href="#about" class="nav-link">Acerca de</a>
-                    <a href="#services" class="nav-link">Servicios</a>
-                    <a href="#design" class="nav-link">Diseño web</a>
-                    <a href="#software" class="nav-link">Software</a>
-                    <a href="#elearning" class="nav-link">E‑learning</a>
-                    <a href="#process" class="nav-link">Proceso</a>
-                    <a href="#tech" class="nav-link">Tecnologías</a>
+                    <a href="/servicios/" class="nav-link">Servicios</a>
+                    <a href="/software/" class="nav-link">Software</a>
+                    <a href="/educacion/" class="nav-link">Educación</a>
+                    <a href="/procesos/" class="nav-link">Proceso</a>
+                    <a href="/contacto/" class="nav-link">Contacto</a>
                     <a href="https://moodle.digitus.com.do" target="_blank" rel="noopener noreferrer"
                         class="btn bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                         Aula Virtual
@@ -157,10 +125,12 @@
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 min-h-[70vh] flex items-center">
                 <div class="grid lg:grid-cols-2 gap-10 items-center">
                     <div>
-                        <h1 id="hero-title" class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500">
+                        <h1 id="hero-title"
+                            class="text-4xl sm:text-6xl font-bold tracking-tight text-dark-500 dark:text-white">
                             Transformamos empresas con
                             software, diseño y estrategia digital</h1>
-                        <p class="mt-6 text-lg text-slate-600">En Digitus Business & Software Solutions impulsamos el
+                        <p class="mt-6 text-lg text-slate-600 dark:text-slate-200">En Digitus Business & Software
+                            Solutions impulsamos el
                             crecimiento de tu empresa con soluciones digitales: diseño web, WordPress, Moodle,
                             desarrollo e
                             ingeniería de software, y gestión de comunidades en redes sociales.</p>
@@ -178,7 +148,7 @@
                                 WhatsApp
                             </a>
                         </div>
-                        <div class="mt-10 flex items-center gap-6 text-slate-600">
+                        <div class="mt-10 flex items-center gap-6 ">
                             <div class="flex items-center gap-2">
                                 <!-- Shield Check Icon -->
                                 <svg class="h-5 w-5 text-brand-600" fill="none" stroke="currentColor"
@@ -186,7 +156,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
-                                <span class="text-dark-500">Calidad empresarial</span>
+                                <span class="text-slate-600 dark:text-slate-200">Calidad empresarial</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <!-- Lightning Bolt Icon -->
@@ -195,7 +165,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
-                                <span class="text-dark-500">Entrega ágil</span>
+                                <span class="text-slate-600 dark:text-slate-200">Entrega ágil</span>
                             </div>
                         </div>
                     </div>
@@ -263,11 +233,19 @@
 
 
         <!-- Servicios -->
-        <section id="services" class="section bg-gradient-to-br from-slate-50 to-blue-50" role="region"
-            aria-labelledby="services-title">
-            <div class="container">
+        <section id="services" class="section relative overflow-hidden" role="region" aria-labelledby="services-title">
+            <!-- Floating glassmorphic circles -->
+            <div class="pointer-events-none absolute -right-32 top-20 w-[380px] h-[380px] rounded-full blur-3xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(82,113,255,0.25), rgba(82,113,255,0.12) 60%, rgba(82,113,255,0.05) 80%, transparent); box-shadow: 0 25px 70px rgba(82,113,255,0.20), inset 0 8px 25px rgba(255,255,255,0.5);">
+            </div>
+            <div class="pointer-events-none absolute left-[30%] -bottom-20 w-[280px] h-[280px] rounded-full blur-2xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(59,130,246,0.20), rgba(82,113,255,0.10) 60%, rgba(82,113,255,0.04) 80%, transparent); box-shadow: 0 20px 50px rgba(82,113,255,0.15), inset 0 6px 20px rgba(255,255,255,0.4);">
+            </div>
+            <div class="container relative z-10">
                 <h2 id="services-title" class="section-title">Nuestros Servicios</h2>
-                <p class="text-center text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
+                <p class="text-center text-lg  mb-12 max-w-3xl mx-auto">
                     Soluciones digitales integrales diseñadas para impulsar el crecimiento de tu empresa
                 </p>
 
@@ -341,11 +319,18 @@
             </div>
         </section>
 
-        <div class="section-divider bottom-wave" aria-hidden="true"></div>
-
         <!-- Acerca de -->
-        <section id="about" class="section bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-            <div class="container">
+        <section id="about" class="section relative overflow-hidden">
+            <!-- Floating glassmorphic circles -->
+            <div class="pointer-events-none absolute -left-28 top-32 w-[400px] h-[400px] rounded-full blur-3xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(82,113,255,0.22), rgba(82,113,255,0.10) 60%, rgba(82,113,255,0.04) 80%, transparent); box-shadow: 0 30px 80px rgba(82,113,255,0.18), inset 0 10px 30px rgba(255,255,255,0.45);">
+            </div>
+            <div class="pointer-events-none absolute right-[20%] -bottom-24 w-[320px] h-[320px] rounded-full blur-2xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(59,130,246,0.18), rgba(82,113,255,0.08) 60%, rgba(82,113,255,0.03) 80%, transparent); box-shadow: 0 25px 60px rgba(82,113,255,0.12), inset 0 8px 24px rgba(255,255,255,0.35);">
+            </div>
+            <div class="container relative z-10">
                 <h2 class="section-title">Acerca de Digitus</h2>
                 <p class="section-subtitle">Transformamos ideas en soluciones digitales que impulsan el crecimiento
                     empresarial</p>
@@ -353,25 +338,25 @@
                 <!-- Company Overview -->
                 <div class="mt-12 grid gap-12 lg:grid-cols-2 items-center">
                     <div class="space-y-6">
-                        <div class="bg-white rounded-2xl p-8 shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-4">Nuestra Misión</h3>
-                            <p class="text-slate-700 leading-relaxed">Somos un equipo multidisciplinario que combina
+                        <div class="card rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4">Nuestra Misión</h3>
+                            <p class="leading-relaxed">Somos un equipo multidisciplinario que combina
                                 negocio y tecnología para diseñar, construir y operar soluciones digitales alineadas a
                                 tus metas. Priorizamos el entendimiento del contexto, la comunicación clara y la entrega
                                 constante de resultados.</p>
                         </div>
 
-                        <div class="bg-white rounded-2xl p-8 shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-4">Nuestra Visión</h3>
-                            <p class="text-slate-700 leading-relaxed">Ser el socio tecnológico de confianza para
+                        <div class="card rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4">Nuestra Visión</h3>
+                            <p class="leading-relaxed">Ser el socio tecnológico de confianza para
                                 empresas que buscan acelerar su transformación digital, ofreciendo soluciones
                                 innovadoras que generen valor real y sostenible.</p>
                         </div>
                     </div>
 
                     <div class="space-y-6">
-                        <div class="bg-white rounded-2xl p-8 shadow-lg">
-                            <h3 class="text-2xl font-bold text-dark-500 mb-6">Nuestros Valores</h3>
+                        <div class="card rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6">Nuestros Valores</h3>
                             <div class="space-y-4">
                                 <div class="flex items-start gap-4">
                                     <div
@@ -383,8 +368,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-900">Excelencia Técnica</h4>
-                                        <p class="text-slate-600 text-sm">Métricas, calidad y seguridad desde el inicio
+                                        <h4 class="font-semibold">Excelencia Técnica</h4>
+                                        <p class="text-sm">Métricas, calidad y seguridad desde el inicio
                                         </p>
                                     </div>
                                 </div>
@@ -398,8 +383,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-900">Colaboración</h4>
-                                        <p class="text-slate-600 text-sm">Enfoque consultivo y colaborativo con nuestros
+                                        <h4 class="font-semibold">Colaboración</h4>
+                                        <p class="text-sm">Enfoque consultivo y colaborativo con nuestros
                                             clientes</p>
                                     </div>
                                 </div>
@@ -413,8 +398,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-900">Agilidad</h4>
-                                        <p class="text-slate-600 text-sm">Equipo ágil con procesos ligeros y entrega
+                                        <h4 class="font-semibold ">Agilidad</h4>
+                                        <p class=" text-sm">Equipo ágil con procesos ligeros y entrega
                                             continua</p>
                                     </div>
                                 </div>
@@ -428,8 +413,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-900">Transparencia</h4>
-                                        <p class="text-slate-600 text-sm">Comunicación clara y honesta en cada etapa del
+                                        <h4 class="font-semibold ">Transparencia</h4>
+                                        <p class=" text-sm">Comunicación clara y honesta en cada etapa del
                                             proyecto</p>
                                     </div>
                                 </div>
@@ -441,8 +426,8 @@
 
                 <!-- Team & Expertise -->
                 <div class="mt-16 grid gap-8 lg:grid-cols-2">
-                    <div class="bg-white rounded-2xl p-8 shadow-lg">
-                        <h3 class="text-2xl font-bold text-dark-500 mb-6">Nuestro Equipo</h3>
+                    <div class="card rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Nuestro Equipo</h3>
                         <div class="space-y-4">
                             <div class="flex items-center gap-4">
                                 <div
@@ -454,8 +439,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-slate-900">Desarrolladores Full-Stack</h4>
-                                    <p class="text-slate-600 text-sm">Especialistas en múltiples tecnologías y
+                                    <h4 class="font-semibold ">Desarrolladores Full-Stack</h4>
+                                    <p class=" text-sm">Especialistas en múltiples tecnologías y
                                         frameworks</p>
                                 </div>
                             </div>
@@ -469,8 +454,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-slate-900">Diseñadores UX/UI</h4>
-                                    <p class="text-slate-600 text-sm">Expertos en experiencia de usuario y diseño
+                                    <h4 class="font-semibold ">Diseñadores UX/UI</h4>
+                                    <p class=" text-sm">Expertos en experiencia de usuario y diseño
                                         centrado en el cliente</p>
                                 </div>
                             </div>
@@ -484,8 +469,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-slate-900">Especialistas en E-learning</h4>
-                                    <p class="text-slate-600 text-sm">Profesionales en diseño instruccional y
+                                    <h4 class="font-semibold ">Especialistas en E-learning</h4>
+                                    <p class=" text-sm">Profesionales en diseño instruccional y
                                         plataformas educativas</p>
                                 </div>
                             </div>
@@ -499,34 +484,34 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-slate-900">Consultores de Negocio</h4>
-                                    <p class="text-slate-600 text-sm">Estrategas que conectan tecnología con objetivos
+                                    <h4 class="font-semibold ">Consultores de Negocio</h4>
+                                    <p class=" text-sm">Estrategas que conectan tecnología con objetivos
                                         empresariales</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-8 shadow-lg">
-                        <h3 class="text-2xl font-bold text-dark-500 mb-6">Nuestra Experiencia</h3>
+                    <div class="card rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Nuestra Experiencia</h3>
                         <div class="space-y-6">
                             <div class="border-l-4 border-brand-500 pl-4">
-                                <h4 class="font-semibold text-slate-900">Sectores de Especialización</h4>
-                                <p class="text-slate-600 text-sm mt-1">Educación, E-commerce, Servicios Financieros,
+                                <h4 class="font-semibold ">Sectores de Especialización</h4>
+                                <p class=" text-sm mt-1">Educación, E-commerce, Servicios Financieros,
                                     Salud, Tecnología</p>
                             </div>
                             <div class="border-l-4 border-green-500 pl-4">
-                                <h4 class="font-semibold text-slate-900">Metodologías Ágiles</h4>
-                                <p class="text-slate-600 text-sm mt-1">Scrum, Kanban, Design Thinking, Lean Startup</p>
+                                <h4 class="font-semibold ">Metodologías Ágiles</h4>
+                                <p class=" text-sm mt-1">Scrum, Kanban, Design Thinking, Lean Startup</p>
                             </div>
                             <div class="border-l-4 border-purple-500 pl-4">
-                                <h4 class="font-semibold text-slate-900">Certificaciones</h4>
-                                <p class="text-slate-600 text-sm mt-1">AWS, Google Cloud, Microsoft Azure, PMP, Scrum
+                                <h4 class="font-semibold ">Certificaciones</h4>
+                                <p class=" text-sm mt-1">AWS, Google Cloud, Microsoft Azure, PMP, Scrum
                                     Master</p>
                             </div>
                             <div class="border-l-4 border-orange-500 pl-4">
-                                <h4 class="font-semibold text-slate-900">Tecnologías Emergentes</h4>
-                                <p class="text-slate-600 text-sm mt-1">AI/ML, Blockchain, IoT, Cloud Computing,
+                                <h4 class="font-semibold ">Tecnologías Emergentes</h4>
+                                <p class=" text-sm mt-1">AI/ML, Blockchain, IoT, Cloud Computing,
                                     Microservicios</p>
                             </div>
                         </div>
@@ -536,8 +521,10 @@
                 <!-- Call to Action -->
                 <div class="mt-16 text-center">
                     <div class="bg-gradient-to-r from-brand-500 to-brand-600 rounded-2xl p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-4">¿Listo para transformar tu negocio?</h3>
-                        <p class="text-brand-100 mb-6">Únete a las empresas que ya confían en Digitus para su
+                        <h3 class="text-2xl font-bold mb-4 text-black dark:text-white">¿Listo para transformar tu
+                            negocio?</h3>
+                        <p class="text-black dark:text-white mb-6">Únete a las empresas que ya confían
+                            en Digitus para su
                             transformación digital</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="#contact" class="btn bg-white text-brand-600 hover:bg-gray-100">Iniciar
@@ -556,69 +543,34 @@
             </div>
         </section>
 
-        <!-- Diseño Web -->
-        <section id="design" class="section">
-            <div class="container">
-                <h2 class="section-title">Diseño web</h2>
-                <p class="section-subtitle">Experiencias rápidas, accesibles y enfocadas en conversión.</p>
-                <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path
-                                    d="M3 5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25V9H3V5.25zM3 10.5h18v8.25A2.25 2.25 0 0118.75 21H5.25A2.25 2.25 0 013 18.75V10.5z" />
-                            </svg>
-                        </div>
-                        <h3 class="card-title">UI/UX</h3>
-                        <p class="card-text">Arquitectura de información, wireframes y sistemas de diseño consistentes.
-                        </p>
-                    </div>
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path
-                                    d="M4.5 6A1.5 1.5 0 016 4.5h12A1.5 1.5 0 0119.5 6v12A1.5 1.5 0 0118 19.5H6A1.5 1.5 0 014.5 18V6z" />
-                            </svg>
-                        </div>
-                        <h3 class="card-title">Responsive</h3>
-                        <p class="card-text">Diseños fluidos, optimizados para móviles y escritorios de alto
-                            rendimiento.
-                        </p>
-                    </div>
-                    <div class="card p-6">
-                        <div class="card-icon bg-brand-50 text-brand-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="icon-lg">
-                                <path
-                                    d="M12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zm2.47 5.28a.75.75 0 111.06 1.06L12.06 13.56a.75.75 0 01-1.06 0L8.47 11.03a.75.75 0 111.06-1.06l1.5 1.5 3.44-3.44z" />
-                            </svg>
-                        </div>
-                        <h3 class="card-title">SEO técnico</h3>
-                        <p class="card-text">Core Web Vitals, accesibilidad y marcado semántico para mejorar rankings.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <div class="section-divider bottom-wave" aria-hidden="true"></div>
 
         <!-- Software -->
-        <section id="software" class="section bg-slate-50">
-            <div class="container">
+        <section id="software" class="section relative overflow-hidden">
+            <!-- Floating glassmorphic circles -->
+            <div class="pointer-events-none absolute -left-20 top-24 w-[340px] h-[340px] rounded-full blur-3xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(82,113,255,0.23), rgba(82,113,255,0.10) 60%, rgba(82,113,255,0.04) 80%, transparent); box-shadow: 0 26px 72px rgba(82,113,255,0.17), inset 0 8px 26px rgba(255,255,255,0.46);">
+            </div>
+            <div class="pointer-events-none absolute right-[25%] -bottom-18 w-[300px] h-[300px] rounded-full blur-2xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(59,130,246,0.17), rgba(82,113,255,0.08) 60%, rgba(82,113,255,0.03) 80%, transparent); box-shadow: 0 21px 52px rgba(82,113,255,0.13), inset 0 6px 19px rgba(255,255,255,0.36);">
+            </div>
+            <div class="container relative z-10">
                 <h2 class="section-title">Software</h2>
                 <p class="section-subtitle">Soluciones a medida con calidad de ingeniería.</p>
                 <div class="mt-10 grid gap-10 md:grid-cols-2 max-w-6xl mx-auto">
                     <!-- Left column: heading 3 + three paragraphs -->
                     <div>
-                        <h3 class="text-xl font-semibold text-slate-900">Plataformas sólidas orientadas al negocio</h3>
-                        <p class="mt-4 text-slate-700">Diseñamos y construimos software alineado a objetivos claros:
+                        <h3 class="text-xl font-semibold ">Plataformas sólidas orientadas al negocio</h3>
+                        <p class="mt-4 text-black dark:text-slate-200">Diseñamos y construimos software alineado a
+                            objetivos claros:
                             ingresos, eficiencia y experiencia del cliente. Cada entrega agrega valor medible.</p>
-                        <p class="mt-4 text-slate-700">Adoptamos buenas prácticas de ingeniería: pruebas automatizadas,
+                        <p class="mt-4 text-black dark:text-slate-200">Adoptamos buenas prácticas de ingeniería: pruebas
+                            automatizadas,
                             CI/CD, observabilidad y seguridad desde el diseño para garantizar confiabilidad.</p>
-                        <p class="mt-4 text-slate-700">Trabajamos de forma iterativa con ciclos cortos, feedback
+                        <p class="mt-4 text-black dark:text-slate-200">Trabajamos de forma iterativa con ciclos cortos,
+                            feedback
                             continuo y
                             comunicación transparente para acelerar el time‑to‑value.</p>
                     </div>
@@ -633,8 +585,8 @@
                                         d="M6.75 3A1.75 1.75 0 005 4.75v14.5A1.75 1.75 0 006.75 21h10.5A1.75 1.75 0 0019 19.25V4.75A1.75 1.75 0 0017.25 3H6.75zM8 6.5h8v1.5H8V6.5zM8 10h8v1.5H8V10zM8 13.5h8V15H8v-1.5z" />
                                 </svg>
                             </div>
-                            <h4 class="mt-3 font-semibold text-slate-900">APIs</h4>
-                            <p class="text-sm text-slate-600 mt-1">REST/GraphQL seguras y documentadas.</p>
+                            <h4 class="mt-3 font-semibold ">APIs</h4>
+                            <p class="text-sm  mt-1">REST/GraphQL seguras y documentadas.</p>
                         </article>
                         <article class="card card-sm">
                             <div class="card-icon bg-brand-50 text-brand-700">
@@ -644,8 +596,8 @@
                                         d="M12 2.25l9.75 5.625V16.5L12 22.125 2.25 16.5V7.875L12 2.25zm0 3.375L5.25 9l6.75 3.375L18.75 9 12 5.625z" />
                                 </svg>
                             </div>
-                            <h4 class="mt-3 font-semibold text-slate-900">Arquitectura</h4>
-                            <p class="text-sm text-slate-600 mt-1">Patrones y escalabilidad con seguridad.</p>
+                            <h4 class="mt-3 font-semibold ">Arquitectura</h4>
+                            <p class="text-sm  mt-1">Patrones y escalabilidad con seguridad.</p>
                         </article>
                         <article class="card card-sm">
                             <div class="card-icon bg-brand-50 text-brand-700">
@@ -654,8 +606,8 @@
                                     <path d="M4.5 5.25h15v13.5h-15V5.25zm3 3v7.5h9V8.25h-9z" />
                                 </svg>
                             </div>
-                            <h4 class="mt-3 font-semibold text-slate-900">Automatización</h4>
-                            <p class="text-sm text-slate-600 mt-1">Integraciones y workflows sin fricción.</p>
+                            <h4 class="mt-3 font-semibold ">Automatización</h4>
+                            <p class="text-sm  mt-1">Integraciones y workflows sin fricción.</p>
                         </article>
                         <article class="card card-sm">
                             <div class="card-icon bg-brand-50 text-brand-700">
@@ -665,8 +617,8 @@
                                         d="M4.5 6.75A2.25 2.25 0 016.75 4.5h10.5A2.25 2.25 0 0119.5 6.75v10.5A2.25 2.25 0 0117.25 19.5H6.75A2.25 2.25 0 014.5 17.25V6.75zM8.25 8.25h7.5v7.5h-7.5v-7.5z" />
                                 </svg>
                             </div>
-                            <h4 class="mt-3 font-semibold text-slate-900">Monitoreo</h4>
-                            <p class="text-sm text-slate-600 mt-1">Logs, métricas y alertas en tiempo real.</p>
+                            <h4 class="mt-3 font-semibold ">Monitoreo</h4>
+                            <p class="text-sm  mt-1">Logs, métricas y alertas en tiempo real.</p>
                         </article>
                     </div>
                 </div>
@@ -674,8 +626,7 @@
         </section>
 
         <!-- E-learning / Moodle -->
-        <section id="elearning"
-            class="section bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 relative overflow-hidden">
+        <section id="elearning" class="section relative overflow-hidden">
             <!-- Background decorative elements -->
             <div class="absolute inset-0 overflow-hidden">
                 <div
@@ -684,6 +635,15 @@
                 <div
                     class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-200/30 to-purple-200/30 rounded-full blur-3xl">
                 </div>
+            </div>
+            <!-- Additional glassmorphic circles -->
+            <div class="pointer-events-none absolute -right-16 top-32 w-[320px] h-[320px] rounded-full blur-3xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(82,113,255,0.21), rgba(82,113,255,0.09) 60%, rgba(82,113,255,0.04) 80%, transparent); box-shadow: 0 24px 68px rgba(82,113,255,0.16), inset 0 7px 24px rgba(255,255,255,0.44);">
+            </div>
+            <div class="pointer-events-none absolute left-[40%] -bottom-12 w-[240px] h-[240px] rounded-full blur-2xl"
+                aria-hidden="true"
+                style="background: radial-gradient(closest-side, rgba(59,130,246,0.16), rgba(82,113,255,0.07) 60%, rgba(82,113,255,0.03) 80%, transparent); box-shadow: 0 18px 48px rgba(82,113,255,0.12), inset 0 5px 17px rgba(255,255,255,0.34);">
             </div>
 
             <div class="container relative z-10">
@@ -700,7 +660,7 @@
                             </svg>
                         </div>
                         <h3 class="card-title text-slate-800">Diseño instruccional</h3>
-                        <p class="card-text text-slate-600">Rutas de aprendizaje, micro‑lecciones y evaluación continua.
+                        <p class="card-text ">Rutas de aprendizaje, micro‑lecciones y evaluación continua.
                         </p>
                     </div>
                     <div
@@ -713,7 +673,7 @@
                             </svg>
                         </div>
                         <h3 class="card-title text-slate-800">Plataforma Moodle</h3>
-                        <p class="card-text text-slate-600">Instalación, personalización, analítica y soporte continuo.
+                        <p class="card-text ">Instalación, personalización, analítica y soporte continuo.
                         </p>
                     </div>
                     <div
@@ -726,457 +686,16 @@
                             </svg>
                         </div>
                         <h3 class="card-title text-slate-800">Contenido multimedia</h3>
-                        <p class="card-text text-slate-600">Guiones, video, evaluaciones y certificación centrados en
+                        <p class="card-text ">Guiones, video, evaluaciones y certificación centrados en
                             resultados.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="section-divider bottom-wave" aria-hidden="true"></div>
 
-        <!-- Proceso -->
-        <section id="process" class="section bg-gradient-to-br from-slate-50 to-blue-50">
-            <div class="container">
-                <h2 class="section-title">Nuestros Procesos</h2>
-                <p class="section-subtitle">Metodologías probadas y estándares de la industria para garantizar la
-                    excelencia en cada proyecto.</p>
 
-                <!-- Timeline for Software Development -->
-                <div class="mt-12">
-                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Software Development Lifecycle (SDLC)
-                    </h3>
-                    <div id="sdlc-timeline" data-timeline></div>
-                </div>
 
-                <!-- Timeline for Educational Design -->
-                <div class="mt-16">
-                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Modelo ADDIE para Diseño Educativo
-                    </h3>
-                    <div id="addie-timeline" data-timeline></div>
-                </div>
-
-                <!-- Timeline for Content Creation -->
-                <div class="mt-16">
-                    <h3 class="text-2xl font-bold text-center text-dark-500 mb-8">Proceso de Creación de Contenido</h3>
-                    <div id="content-timeline" data-timeline></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Tecnologías -->
-        <section id="tech" class="section bg-slate-50">
-            <div class="container">
-                <h2 class="section-title">Tecnologías</h2>
-                <p class="section-subtitle">Seleccionamos herramientas modernas y confiables según el contexto de tu
-                    negocio.</p>
-
-                <div class="mt-12 grid gap-8 lg:grid-cols-2">
-                    <!-- Web Design & Development -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">Diseño Web</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">HTML5</span>
-                            <span class="tech-chip">CSS3</span>
-                            <span class="tech-chip">Tailwind CSS</span>
-                            <span class="tech-chip">JavaScript</span>
-                            <span class="tech-chip">React</span>
-                            <span class="tech-chip">Vue.js</span>
-                            <span class="tech-chip">Figma</span>
-                            <span class="tech-chip">Adobe XD</span>
-                            <span class="tech-chip">Responsive Design</span>
-                            <span class="tech-chip">UI/UX</span>
-                        </div>
-                    </div>
-
-                    <!-- Software Engineering -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">Ingeniería de Software</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">Node.js</span>
-                            <span class="tech-chip">Python</span>
-                            <span class="tech-chip">PHP</span>
-                            <span class="tech-chip">MySQL</span>
-                            <span class="tech-chip">PostgreSQL</span>
-                            <span class="tech-chip">MongoDB</span>
-                            <span class="tech-chip">Docker</span>
-                            <span class="tech-chip">CI/CD</span>
-                            <span class="tech-chip">Git</span>
-                            <span class="tech-chip">API REST</span>
-                        </div>
-                    </div>
-
-                    <!-- WordPress -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.59-1.764.388-3.053-.15-3.973zM17.91 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C20.76 4.305 19.78 3 17.91 3zM2.25 6.825c-.54.92-.74 2.21-.15 3.973l3.295 9.527C2.156 18.456 0 14.979 0 11c0-1.875.478-3.638 1.318-5.175zM6.29 3c-1.87 0-3.204 1.305-3.204 3.116 0 1.73 1.194 2.976 2.91 2.976 1.75 0 3.04-1.246 3.04-2.976C9.1 4.305 8.12 3 6.29 3z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">WordPress</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">WordPress Core</span>
-                            <span class="tech-chip">Custom Themes</span>
-                            <span class="tech-chip">Plugin Development</span>
-                            <span class="tech-chip">WooCommerce</span>
-                            <span class="tech-chip">Elementor</span>
-                            <span class="tech-chip">Gutenberg</span>
-                            <span class="tech-chip">Custom Post Types</span>
-                            <span class="tech-chip">ACF</span>
-                            <span class="tech-chip">Performance</span>
-                            <span class="tech-chip">Security</span>
-                        </div>
-                    </div>
-
-                    <!-- E-learning & Moodle -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">E-learning & Educación</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">Moodle</span>
-                            <span class="tech-chip">LMS Development</span>
-                            <span class="tech-chip">SCORM</span>
-                            <span class="tech-chip">xAPI</span>
-                            <span class="tech-chip">Video Learning</span>
-                            <span class="tech-chip">Interactive Content</span>
-                            <span class="tech-chip">Gamification</span>
-                            <span class="tech-chip">Assessment Tools</span>
-                            <span class="tech-chip">Progress Tracking</span>
-                            <span class="tech-chip">Mobile Learning</span>
-                        </div>
-                    </div>
-
-                    <!-- Content Creation -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 10h6m-6 4h6m-6 4h4" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">Creación de Contenido</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">Content Strategy</span>
-                            <span class="tech-chip">SEO Técnico</span>
-                            <span class="tech-chip">Analítica Web</span>
-                            <span class="tech-chip">Google Analytics</span>
-                            <span class="tech-chip">Social Media</span>
-                            <span class="tech-chip">Video Production</span>
-                            <span class="tech-chip">Graphic Design</span>
-                            <span class="tech-chip">Copywriting</span>
-                            <span class="tech-chip">Email Marketing</span>
-                            <span class="tech-chip">Automation</span>
-                        </div>
-                    </div>
-
-                    <!-- Web Hosting & Infrastructure -->
-                    <div class="card p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-dark-500">Hosting & Infraestructura</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tech-chip">AWS S3</span>
-                            <span class="tech-chip">CloudFront</span>
-                            <span class="tech-chip">VPS</span>
-                            <span class="tech-chip">SSL Certificates</span>
-                            <span class="tech-chip">CDN</span>
-                            <span class="tech-chip">Backup Solutions</span>
-                            <span class="tech-chip">Performance Optimization</span>
-                            <span class="tech-chip">Security</span>
-                            <span class="tech-chip">Monitoring</span>
-                            <span class="tech-chip">DevOps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto -->
-        <section id="contact"
-            class="section bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-            <!-- Background decorative elements -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div
-                    class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl">
-                </div>
-                <div
-                    class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-200/30 to-blue-200/30 rounded-full blur-3xl">
-                </div>
-            </div>
-
-            <div class="container relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">¿Listo para Transformar tu Negocio?</h2>
-                    <p class="section-subtitle max-w-3xl mx-auto">
-                        Cuéntanos sobre tu proyecto y te enviaremos una propuesta personalizada en menos de 24 horas.
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Contact Info & CTA -->
-                    <div class="space-y-8">
-                        <div class="glassmorphic-card p-8">
-                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Hablemos de tu Proyecto</h3>
-                            <p class="text-slate-600 mb-6">
-                                Desde desarrollo de software hasta estrategias digitales, estamos aquí para hacer
-                                realidad tu visión.
-                            </p>
-
-                            <div class="space-y-4">
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <div
-                                        class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">Email</p>
-                                        <p class="text-sm text-slate-600">info@digitus.com.do</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <div
-                                        class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">WhatsApp</p>
-                                        <p class="text-sm text-slate-600">+1 (809) 617-1000</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <div
-                                        class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">Ubicación</p>
-                                        <p class="text-sm text-slate-600">Santo Domingo, República Dominicana</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CTA Buttons -->
-                        <div class="space-y-4">
-                            <button id="open-contact-modal"
-                                class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                                💬 Enviar Mensaje
-                            </button>
-
-                            <a href="https://wa.me/18096171000?text=Hola%20Digitus,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios"
-                                target="_blank" rel="noopener noreferrer"
-                                class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.214-.372a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
-                                </svg>
-                                WhatsApp Directo
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trust Indicators -->
-                    <div class="space-y-6">
-                        <div class="glassmorphic-card p-6">
-                            <h4 class="text-lg font-semibold text-slate-800 mb-4">¿Por qué elegirnos?</h4>
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-700">Respuesta en menos de 24 horas</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-700">Propuesta personalizada y gratuita</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-700">Consultoría inicial sin compromiso</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-700">Soporte técnico continuo</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="glassmorphic-card p-6">
-                            <h4 class="text-lg font-semibold text-slate-800 mb-4">Nuestros Clientes Confían en Nosotros
-                            </h4>
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div class="p-4 bg-white/50 rounded-lg">
-                                    <div class="text-2xl font-bold text-blue-600">50+</div>
-                                    <div class="text-sm text-slate-600">Proyectos Completados</div>
-                                </div>
-                                <div class="p-4 bg-white/50 rounded-lg">
-                                    <div class="text-2xl font-bold text-green-600">100%</div>
-                                    <div class="text-sm text-slate-600">Satisfacción</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Modal -->
-        <div id="contact-modal"
-            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 rounded-t-2xl">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-2xl font-bold text-slate-800">Envíanos un Mensaje</h3>
-                        <button id="close-contact-modal"
-                            class="w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors">
-                            <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="p-6">
-                    <form id="contact-form" class="space-y-6" role="form" aria-labelledby="contact-title">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="modal-name" class="block text-sm font-medium text-slate-700 mb-2">Nombre
-                                    *</label>
-                                <input id="modal-name" name="name" type="text"
-                                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                                    placeholder="Tu nombre completo" required />
-                            </div>
-                            <div>
-                                <label for="modal-email" class="block text-sm font-medium text-slate-700 mb-2">Email
-                                    *</label>
-                                <input id="modal-email" name="email" type="email"
-                                    class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                                    placeholder="tucorreo@empresa.com" required />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="modal-company"
-                                class="block text-sm font-medium text-slate-700 mb-2">Empresa</label>
-                            <input id="modal-company" name="company" type="text"
-                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                                placeholder="Nombre de tu empresa" />
-                        </div>
-
-                        <div>
-                            <label for="modal-service" class="block text-sm font-medium text-slate-700 mb-2">Servicio de
-                                Interés</label>
-                            <select id="modal-service" name="service"
-                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
-                                <option value="">Selecciona un servicio</option>
-                                <option value="web-design">Diseño Web</option>
-                                <option value="wordpress">WordPress</option>
-                                <option value="moodle">Moodle / E-learning</option>
-                                <option value="software">Desarrollo de Software</option>
-                                <option value="content">Creación de Contenido</option>
-                                <option value="social-media">Social Media</option>
-                                <option value="consulting">Consultoría Digital</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="modal-message" class="block text-sm font-medium text-slate-700 mb-2">Mensaje
-                                *</label>
-                            <textarea id="modal-message" name="message" rows="5"
-                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
-                                placeholder="Cuéntanos sobre tu proyecto, objetivos y cualquier detalle que consideres importante..."
-                                required></textarea>
-                        </div>
-
-                        <div class="flex items-center gap-4">
-                            <button type="submit"
-                                class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                                📧 Abrir mi Email
-                            </button>
-                            <p id="modal-form-status" class="text-sm text-slate-600"></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </main>
 
     <!-- Floating WhatsApp Button -->
@@ -1194,9 +713,12 @@
     <!-- Footer -->
     <footer class="border-t border-slate-200" role="contentinfo">
         <div class="container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-sm text-slate-600">© <span id="year"></span> Digitus Business & Software Solutions. Todos los
-                derechos reservados.</p>
-            <div class="flex items-center gap-4 text-slate-600">
+            <div class="text-center sm:text-left">
+                <p class="text-sm ">© <span id="year"></span> Digitus Business & Software Solutions. Todos los
+                    derechos reservados.</p>
+                <p class="text-sm text-slate-500 mt-1">RNC: 1-33-31249-2</p>
+            </div>
+            <div class="flex items-center gap-4 ">
                 <a href="#home" class="hover:text-brand-700">Inicio</a>
                 <a href="#services" class="hover:text-brand-700">Servicios</a>
                 <a href="#contact" class="hover:text-brand-700">Contacto</a>
@@ -1213,6 +735,7 @@
     <!-- Slider only on dev while testing -->
     <script src="/assets/js/slider.js"></script>
     <script src="/assets/js/consent.js"></script>
+    <script src="/assets/js/darkmode.js"></script>
 </body>
 
 </html>

@@ -1,23 +1,364 @@
 /* Minimal custom styles. All class names are in English; content stays Spanish. */
 
+/* CSS Custom Properties for Theme Colors */
+:root {
+  /* Light mode colors */
+  --text-primary: #000000;      /* Pure black for main text */
+  --text-secondary: #374151;    /* Dark gray for secondary text */
+  --text-muted: #6b7280;        /* Medium gray for muted text */
+  --text-inverse: #f8fafc;      /* Very light for dark backgrounds */
+
+  /* Background colors */
+  --bg-primary: #ffffff;       /* White background */
+  --bg-secondary: #f8fafc;      /* Light gray background */
+  --bg-card: #ffffff;           /* Card background */
+  --bg-header: rgba(255, 255, 255, 0.8); /* Header background */
+
+  /* Border colors */
+  --border-primary: #e2e8f0;    /* Light borders */
+  --border-secondary: #cbd5e1;  /* Medium borders */
+
+  /* Brand colors */
+  --brand-primary: #5271ff;
+  --brand-hover: #3d5bff;
+  --brand-light: #e0e7ff;
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Dark mode colors */
+  --text-primary: #ffffff;      /* Pure white for main text */
+  --text-secondary: #e2e8f0;    /* Light gray for secondary text */
+  --text-muted: #cbd5e1;        /* Medium light gray for muted text */
+  --text-inverse: #1e293b;      /* Dark for light backgrounds */
+
+  /* Background colors */
+  --bg-primary: #000937;        /* Custom dark blue background */
+  --bg-secondary: #001a4d;      /* Slightly lighter dark blue */
+  --bg-card: #001a4d;           /* Card background */
+  --bg-header: rgba(0, 9, 55, 0.8); /* Header background */
+
+  /* Border colors */
+  --border-primary: #334155;    /* Dark borders */
+  --border-secondary: #475569;  /* Medium dark borders */
+}
+
+/* Override Tailwind dark background classes with custom color */
+.dark {
+  background-color: var(--bg-primary) !important;
+}
+
+.dark body {
+  background-color: var(--bg-primary) !important;
+}
+
+.dark .bg-slate-900 {
+  background-color: var(--bg-primary) !important;
+}
+
+.dark .dark\\:bg-slate-900 {
+  background-color: var(--bg-primary) !important;
+}
+
+.dark .section-title {
+  color: var(--accent-color);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .section-subtitle {
+  color: var(--text-secondary);
+}
+
+/* Dark mode headings */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--accent-color);
+}
+
+.dark .card {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.dark .card-title {
+  color: var(--accent-color);
+}
+
+.dark .card-text {
+  color: var(--text-primary);
+}
+
+.dark .nav-link {
+  color: var(--text-secondary);
+}
+
+.dark .nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.dark .btn-outline {
+  border-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+.dark .btn-outline:hover {
+  background-color: var(--bg-secondary);
+}
+
+.dark .form-input {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.dark .form-input:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(82, 113, 255, 0.1);
+}
+
+.dark .form-label {
+  color: var(--text-primary);
+}
+
+.dark .glassmorphic-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
+.dark .glassmorphic-card:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(51, 65, 85, 0.4);
+}
+
+.dark .service-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+}
+
+.dark .service-card:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-secondary);
+}
+
+.dark .status-badge {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.dark .status-badge.online {
+  background-color: #065f46;
+  color: #6ee7b7;
+}
+
+.dark .tech-chip {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-primary);
+}
+
+.dark .tech-chip:hover {
+  background-color: var(--bg-secondary);
+}
+
+.dark header {
+  background-color: var(--bg-header);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--border-primary);
+}
+
+.dark footer {
+  background-color: var(--bg-primary);
+  border-top-color: var(--border-primary);
+}
+
+.dark .timeline-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.dark .timeline-card-title {
+  color: var(--accent-color);
+}
+
+.dark .timeline-card-description {
+  color: var(--text-primary);
+}
+
+.dark .timeline-tag {
+  background-color: var(--bg-card);
+  color: var(--brand-primary);
+  border-color: var(--border-primary);
+}
+
+/* Dark mode section backgrounds */
+.dark .section {
+  background-color: var(--bg-primary);
+}
+
+.dark .section.bg-slate-50 {
+  background-color: var(--bg-secondary);
+}
+
+.dark .section.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-primary));
+}
+
+/* Ensure all text in cards is light in dark mode */
+.dark .card * {
+  color: var(--text-primary);
+}
+
+.dark .card p,
+.dark .card span,
+.dark .card div {
+  color: var(--text-primary);
+}
+
+.dark .card h1,
+.dark .card h2,
+.dark .card h3,
+.dark .card h4,
+.dark .card h5,
+.dark .card h6 {
+  color: var(--text-primary);
+}
+
+/* Service cards text */
+.dark .service-card * {
+  color: var(--text-primary);
+}
+
+.dark .service-card p {
+  color: var(--text-primary);
+}
+
+/* Glassmorphic cards text */
+.dark .glassmorphic-card * {
+  color: var(--text-primary);
+}
+
+.dark .glassmorphic-card p {
+  color: var(--text-primary);
+}
+
+/* Base styles using CSS variables */
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Normal text content styling */
+p, span, div, li, td, th, label, small, .text-content {
+  color: var(--text-primary);
+}
+
+/* Secondary text */
+.text-secondary, .text-muted {
+  color: var(--text-secondary);
+}
+
+/* Section backgrounds */
+.section {
+  background-color: var(--bg-primary);
+}
+
+.section.bg-slate-50 {
+  background-color: var(--bg-secondary);
+}
+
+.section.bg-gradient-to-br {
+  background: var(--bg-secondary);
+}
+
+.section-title {
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.card-title {
+  color: var(--accent-color);
+}
+
+.card-text {
+  color: var(--text-primary);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.btn-outline {
+  border-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-secondary);
+}
+
+.form-input {
+  background-color: var(--bg-card);
+  border-color: var(--border-primary);
+  color: var(--text-primary);
+}
+
+.form-input:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(82, 113, 255, 0.1);
+}
+
+.form-label {
+  color: var(--text-primary);
+}
+
+header {
+  background-color: var(--bg-header);
+  border-bottom-color: var(--border-primary);
+}
+
+footer {
+  background-color: var(--bg-primary);
+  border-top-color: var(--border-primary);
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
 .container { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
 .section { padding-top: 4rem; padding-bottom: 4rem; }
-.section-title { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; color: #000937; text-align: center; }
-.section-subtitle { margin-top: 0.5rem; color: #6b7280; text-align: center; }
+.section-title { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; text-align: center; }
+.section-subtitle { margin-top: 0.5rem; text-align: center; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 0.5rem; padding: 0.625rem 1rem; font-weight: 600; }
-.btn-primary { background-color: #5271ff; color: white; }
-.btn-primary:hover { background-color: #3d5bff; }
-.btn-outline { border: 1px solid #5271ff; color: #000937; }
-.btn-outline:hover { background-color: rgb(241 245 249); }
+.btn-primary { background-color: var(--brand-primary); color: white; }
+.btn-primary:hover { background-color: var(--brand-hover); }
+.btn-outline { border: 1px solid var(--brand-primary); }
+.btn-outline:hover { background-color: var(--bg-secondary); }
 
-.nav-link { color: #6b7280; }
-.nav-link:hover { color: #5271ff; }
-
-.card { background-color: white; border: 1px solid rgb(226 232 240); border-radius: 0.75rem; padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.card { border-radius: 0.75rem; padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
 .card-icon { width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: inline-flex; align-items: center; justify-content: center; }
-.card-title { margin-top: 0.75rem; font-weight: 600; color: #000937; }
-.card-text { margin-top: 0.5rem; color: #6b7280; }
+.card-title { margin-top: 0.75rem; font-weight: 600; }
+.card-text { margin-top: 0.5rem; }
 
 /* Subtle card hover and tighter max width for nicer spacing */
 .card { transition: transform .2s ease, box-shadow .2s ease; }
@@ -121,10 +462,7 @@ a[href="#main-content"]:focus {
 .logo { height: 2.5rem; width: auto; transition: opacity 0.2s ease; }
 .logo:hover { opacity: 0.8; }
 
-/* Section decorative waves */
-.section-divider { position: relative; height: 60px; overflow: hidden; }
-.section-divider.top-wave { background: linear-gradient(to bottom, rgba(82,113,255,0.06), rgba(82,113,255,0)); }
-.section-divider.bottom-wave { background: linear-gradient(to top, rgba(82,113,255,0.06), rgba(82,113,255,0)); }
+/* Section decorative waves - removed to maintain clean glassmorphic look */
 
 /* Design section background art (only for #design) */
 .bg-design-art { position: relative; overflow: hidden; z-index: 0; padding-top: 5rem; padding-bottom: 5rem; }
@@ -175,7 +513,7 @@ a[href="#main-content"]:focus {
 :root {
   --primary-color: #5271ff;
   --secondary-color: #3b82f6;
-  --accent-color: #10b981;
+  --accent-color: #5271ff;
   --gold-color: #fbbf24;
   --text-dark: #1e293b;
   --text-light: #64748b;
@@ -638,11 +976,24 @@ a[href="#main-content"]:focus {
   line-height: 1.1;
 }
 
+/* Removed global heading color and gradient text overrides to respect
+   per-element utility classes like `text-black` and `dark:text-white`. */
+
+/* Override for specific cases where we want different colors */
+.hero-title {
+  background: linear-gradient(45deg, #ffffff, #fbbf24, #10b981);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: 700;
   background: var(--gradient-primary);
   -webkit-background-clip: text;

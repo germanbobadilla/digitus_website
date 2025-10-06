@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Educación | Digitus</title>
+    <meta name="description" content="Educación: contenidos, Moodle y más." />
+    <link rel="icon" type="image/png" href="/images/logos/fav-48.png" />
+    
+    
+    
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    
+    <link rel="stylesheet" href="/assets/css/pages/education.css" />
+</head>
+
+<body class="antialiased text-slate-800 bg-white dark:text-slate-100 dark:bg-slate-900 transition-colors duration-300">
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-600 text-white px-4 py-2 rounded z-50">Saltar
+        al contenido principal</a>
+
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 transition-colors duration-300"
+        role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/index.html#home" class="flex items-center gap-3">
+                    <img src="/images/logos/logo.png" alt="Digitus" class="logo">
+                    <span class="text-xl font-bold text-dark-500 dark:text-white">Digitus</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+                    <a href="/servicios/" class="nav-link">Servicios</a>
+                    <a href="/education/" class="nav-link">Educación</a>
+                    <a href="/software/" class="nav-link">Software</a>
+                    <a href="/procesos/" class="nav-link">Proceso</a>
+                    <a href="/contacto/" class="nav-link">Contacto</a>
+                    <a href="https://moodle.digitus.com.do" target="_blank" rel="noopener"
+                        class="btn bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">Aula
+                        Virtual</a>
+                    <a href="https://app.digitus.com.do" target="_blank" rel="noopener" class="btn btn-primary">Mis
+                        Servicios</a>
+                </nav>
+                <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white" aria-label="Menú móvil">
+            <div class="px-4 py-3 space-y-2">
+                <a href="/servicios/" class="block nav-link">Servicios</a>
+                <a href="/education/" class="block nav-link">Educación</a>
+                <a href="/software/" class="block nav-link">Software</a>
+                <a href="/procesos/" class="block nav-link">Proceso</a>
+                <a href="/contacto/" class="block nav-link">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container text-center">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200" role="contentinfo">
+        <div class="container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <p class="text-sm ">© <span id="year"></span> Digitus Business & Software Solutions. Todos los derechos
+                    reservados.</p>
+                <p class="text-sm text-slate-500 mt-1">RNC: 1-33-31249-2</p>
+            </div>
+            <div class="flex items-center gap-4 ">
+                <a href="/index.html#home" class="hover:text-brand-700">Inicio</a>
+                <a href="/servicios/" class="hover:text-brand-700">Servicios</a>
+                <a href="/contacto/" class="hover:text-brand-700">Contacto</a>
+                <a href="/politicas-de-privacidad/" class="hover:text-brand-700">Política de Privacidad</a>
+                <a href="/terminos-de-uso/" class="hover:text-brand-700">Términos de Uso</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Educación · Moodle | Digitus</title>
+    <link rel="icon" type="image/png" href="/images/logos/fav-48.png" />
+    
+    
+    
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    
+    <link rel="stylesheet" href="/assets/css/pages/education.css" />
+</head>
+
+<body class="antialiased text-slate-800 bg-white dark:text-slate-100 dark:bg-slate-900 transition-colors duration-300">
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 transition-colors duration-300"
+        role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/index.html#home" class="flex items-center gap-3">
+                    <img src="/images/logos/logo.png" alt="Digitus" class="logo">
+                    <span class="text-xl font-bold text-dark-500 dark:text-white">Digitus</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+                    <a href="/servicios/" class="nav-link">Servicios</a>
+                    <a href="/education/" class="nav-link">Educación</a>
+                    <a href="/software/" class="nav-link">Software</a>
+                    <a href="/procesos/" class="nav-link">Proceso</a>
+                    <a href="/contacto/" class="nav-link">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container text-center">
+                <!-- Blueprint: empty content area for Moodle -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200" role="contentinfo">
+        <div class="container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <p class="text-sm ">© <span id="year"></span> Digitus Business & Software Solutions. Todos los derechos
+                    reservados.</p>
+                <p class="text-sm text-slate-500 mt-1">RNC: 1-33-31249-2</p>
+            </div>
+            <div class="flex items-center gap-4 ">
+                <a href="/index.html#home" class="hover:text-brand-700">Inicio</a>
+                <a href="/servicios/" class="hover:text-brand-700">Servicios</a>
+                <a href="/contacto/" class="hover:text-brand-700">Contacto</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -11,53 +11,65 @@
     <script>
         // Google Consent Mode v2 defaults (must run before any measurement tags)
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('consent', 'default', {
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied',
-          'analytics_storage': 'denied',
-          'wait_for_update': 500
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
         });
         gtag('set', 'url_passthrough', true);
         gtag('set', 'ads_data_redaction', true);
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f2ff',
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        50: '#f0f2ff',
                             100: '#e6ebff',
-                            200: '#d1d9ff',
-                            300: '#a8b8ff',
-                            400: '#7c8cff',
-                            500: '#5271ff',
-                            600: '#3d5bff',
-                            700: '#2d47ff',
-                            800: '#1f3ae8',
-                            900: '#1a2bb8'
-                        },
-                        dark: {
-                            50: '#f0f2ff',
+                                200: '#d1d9ff',
+                                    300: '#a8b8ff',
+                                        400: '#7c8cff',
+                                            500: '#5271ff',
+                                                600: '#3d5bff',
+                                                    700: '#2d47ff',
+                                                        800: '#1f3ae8',
+                                                            900: '#1a2bb8'
+                    },
+                    dark: {
+                        50: '#f0f2ff',
                             100: '#e6ebff',
-                            200: '#d1d9ff',
-                            300: '#a8b8ff',
-                            400: '#7c8cff',
-                            500: '#000937',
-                            600: '#00082e',
-                            700: '#000725',
-                            800: '#00061c',
-                            900: '#000513'
-                        }
+                                200: '#d1d9ff',
+                                    300: '#a8b8ff',
+                                        400: '#7c8cff',
+                                            500: '#000937',
+                                                600: '#00082e',
+                                                    700: '#000725',
+                                                        800: '#00061c',
+                                                            900: '#000513'
                     }
                 }
             }
         }
+        }
     </script>
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    
+    
+    
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
+    
+    <link rel="stylesheet" href="/assets/css/pages/terminos-de-uso.css" />
 </head>
 
 <body class="antialiased text-slate-800">
@@ -76,13 +88,13 @@
                     <span class="text-xl font-bold text-dark-500">Digitus</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8" role="navigation" aria-label="Navegación principal">
-                <a href="../index.html#services" class="nav-link">Servicios</a>
-                <a href="../index.html#design" class="nav-link">Diseño web</a>
-                <a href="../index.html#software" class="nav-link">Software</a>
-                <a href="../index.html#elearning" class="nav-link">E‑learning</a>
-                <a href="../index.html#about" class="nav-link">Acerca de</a>
-                <a href="../index.html#process" class="nav-link">Proceso</a>
-                <a href="../index.html#tech" class="nav-link">Tecnologías</a>
+                    <a href="../index.html#services" class="nav-link">Servicios</a>
+                    <a href="../index.html#design" class="nav-link">Diseño web</a>
+                    <a href="../index.html#software" class="nav-link">Software</a>
+                    <a href="../index.html#elearning" class="nav-link">E‑learning</a>
+                    <a href="../index.html#about" class="nav-link">Acerca de</a>
+                    <a href="../index.html#process" class="nav-link">Proceso</a>
+                    <a href="../index.html#tech" class="nav-link">Tecnologías</a>
                     <a href="https://moodle.digitus.com.do" target="_blank" rel="noopener noreferrer"
                         class="btn bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                         Aula Virtual

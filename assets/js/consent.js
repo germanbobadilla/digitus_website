@@ -48,11 +48,11 @@
     // Update Google Consent Mode v2 if available
     try {
       if (typeof gtag === "function") {
-        gtag('consent', 'update', {
-          'ad_storage': prefs && prefs.marketing ? 'granted' : 'denied',
-          'ad_user_data': prefs && prefs.marketing ? 'granted' : 'denied',
-          'ad_personalization': prefs && prefs.marketing ? 'granted' : 'denied',
-          'analytics_storage': prefs && prefs.analytics ? 'granted' : 'denied'
+        gtag("consent", "update", {
+          ad_storage: prefs && prefs.marketing ? "granted" : "denied",
+          ad_user_data: prefs && prefs.marketing ? "granted" : "denied",
+          ad_personalization: prefs && prefs.marketing ? "granted" : "denied",
+          analytics_storage: prefs && prefs.analytics ? "granted" : "denied",
         });
       }
     } catch (_) {
@@ -76,7 +76,7 @@
             <p>
               Usamos cookies y tecnologías similares para mejorar tu experiencia, analizar el uso y, con tu
               consentimiento, personalizar contenido y marketing. Consulta nuestra
-              <a href="/pages/politicas-de-privacidad.html" class="text-brand-600 hover:text-brand-700 underline">Política de Privacidad</a> para más detalles.
+              <a href="/politicas-de-privacidad/" class="text-brand-600 hover:text-brand-700 underline">Política de Privacidad</a> para más detalles.
             </p>
           </div>
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
