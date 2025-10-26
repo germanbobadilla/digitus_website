@@ -39,9 +39,18 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="/images/logos/logo.png" as="image" />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7NPYXZ0T4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D7NPYXZ0T4');
+    </script>
+
     <!-- Stylesheets -->
-    
-    
+
+
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -68,9 +77,9 @@
         }
     }
     </script>
-    
-    
-    
+
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link rel="stylesheet" href="/assets/css/global.css" />
@@ -79,7 +88,7 @@
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link rel="stylesheet" href="/assets/css/global.css" />
     <link rel="stylesheet" href="/assets/css/pages/[PAGE].css" />
-    
+
     <link rel="stylesheet" href="/assets/css/pages/educacion.css" />
 </head>
 
@@ -242,8 +251,7 @@
             </div>
             <nav class="flex items-center gap-4" aria-label="Enlaces del pie de página">
                 <a href="/index.html#home" class="hover:text-brand-700" aria-label="Ir al inicio">Inicio</a>
-                <a href="/servicios/" class="hover:text-brand-700"
-                    aria-label="Ver nuestros servicios">Servicios</a>
+                <a href="/servicios/" class="hover:text-brand-700" aria-label="Ver nuestros servicios">Servicios</a>
                 <a href="/contacto/" class="hover:text-brand-700" aria-label="Contáctanos">Contacto</a>
             </nav>
         </div>
