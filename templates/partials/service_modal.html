@@ -1,0 +1,11 @@
+<div class="modal-card glass">
+  <span class="mono">{{ c.t("modal.kicker") }}</span>
+  <h3 id="modal-title">{{ s.title }}</h3>
+  <p>{{ s.desc }}</p>
+  <span class="mono" style="display:block;margin-top:22px">{{ c.t("modal.includes") }}</span>
+  <ol>{% for x in s.items %}<li>{{ x }}</li>{% endfor %}</ol>
+  <div class="modal-actions">
+    <a href="#contact" class="btn btn-primary" data-pick-service="{{ s.form_value }}">{{ c.t("modal.cta") }} →</a>
+    <button type="button" class="btn btn-ghost" data-close autofocus>{{ c.t("modal.close") }}</button>
+  </div>
+</div>

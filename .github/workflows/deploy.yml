@@ -1,27 +1,72 @@
-name: Deploy to S3
+name: CI / Deploy
 
 on:
+  pull_request:
   push:
-    branches:
-      - main # Change if your default branch is 'master'
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  STACK_NAME: digitus-site
+  AWS_REGION: us-east-1
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with: { components: "clippy, rustfmt" }
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+  deploy:
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install cargo-lambda (bundles zig)
+        run: pip install cargo-lambda
+      - name: Build Lambda (arm64)
+        run: cargo lambda build --release --arm64
+      - uses: aws-actions/setup-sam@v2
+        with: { use-installer: true }
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Sync files to S3
-        run: aws s3 sync . s3://digitus.com.do --delete
-
-      - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribution-id E1X8PSUZIPUQPI --paths "/*"
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Deploy stack
+        run: |
+          sam deploy \
+            --stack-name "$STACK_NAME" \
+            --region "$AWS_REGION" \
+            --resolve-s3 \
+            --capabilities CAPABILITY_IAM \
+            --no-confirm-changeset --no-fail-on-empty-changeset \
+            --parameter-overrides \
+              SiteUrl="${{ vars.SITE_URL }}" \
+              DomainName="${{ vars.DOMAIN_NAME || 'digitus.do' }}" \
+              HostedZoneId="${{ vars.HOSTED_ZONE_ID }}" \
+              ContactFrom="${{ vars.CONTACT_FROM }}" \
+              ContactFromAddress="${{ vars.CONTACT_FROM_ADDRESS }}" \
+              ContactTo="${{ vars.CONTACT_TO }}" \
+              AssetVersion="${GITHUB_SHA::8}" \
+              OriginVerifySecret="${{ secrets.ORIGIN_VERIFY_SECRET }}"
+      - name: Upload static assets
+        run: |
+          out() { aws cloudformation describe-stacks --stack-name "$STACK_NAME" --query "Stacks[0].Outputs[?OutputKey=='$1'].OutputValue" --output text; }
+          BUCKET=$(out StaticBucketName); DIST=$(out DistributionId)
+          aws s3 sync static "s3://$BUCKET/static" --delete --cache-control "public, max-age=31536000, immutable"
+          aws cloudfront create-invalidation --distribution-id "$DIST" --paths "/*"

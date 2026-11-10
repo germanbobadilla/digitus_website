@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(cargo build:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo run:*)",
+      "Bash(cargo lambda build:*)",
+      "Bash(make dev)",
+      "Bash(make test)",
+      "Bash(make check)",
+      "Bash(make build)",
+      "Bash(sam validate:*)",
+      "Bash(sam build:*)"
+    ],
+    "ask": [
+      "Bash(sam deploy:*)",
+      "Bash(sam delete:*)",
+      "Bash(make deploy)",
+      "Bash(aws:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/rustfmt.sh", "timeout": 30 },
+          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-frontend.sh", "timeout": 15 }
+        ]
+      }
+    ]
+  }
+}

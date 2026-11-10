@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="{{ c.code() }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ c.t("meta.title") }}{% endblock %}</title>
+    <meta name="description" content="{{ c.t(" meta.desc") }}">
+    <link rel="canonical" href="{{ c.site_url }}/{{ c.code() }}/">
+    <link rel="alternate" hreflang="es" href="{{ c.site_url }}/es/">
+    <link rel="alternate" hreflang="en" href="{{ c.site_url }}/en/">
+    <link rel="alternate" hreflang="x-default" href="{{ c.site_url }}/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Digitus">
+    <meta property="og:title" content="{{ c.t(" meta.title") }}">
+    <meta property="og:description" content="{{ c.t(" meta.desc") }}">
+    <meta property="og:url" content="{{ c.site_url }}/{{ c.code() }}/">
+    <meta property="og:image" content="{{ c.site_url }}/static/img/hero-team-1600.webp">
+    <meta property="og:locale" content="{% if c.is_es() %}es_DO{% else %}en_US{% endif %}">
+    <meta name="theme-color" content="#F7F9FF">
+    <link rel="icon" href="/static/img/mark.svg" type="image/svg+xml">
+    <link rel="icon" href="/static/img/fav-48.png" sizes="48x48" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/site.css?v={{ c.v }}">
+    <script>document.documentElement.classList.add("js")</script>
+    <script src="/static/js/htmx.min.js?v={{ c.v }}" defer></script>
+    <script src="/static/js/site.js?v={{ c.v }}" defer></script>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <a class="skip" href="#main">{{ c.t("nav.skip") }}</a>
+    <div class="bg" aria-hidden="true">
+        <div class="grid-lines"></div>
+        <div class="blob a"></div>
+        <div class="blob b"></div>
+        <div class="blob c"></div>
+    </div>
+    {% include "partials/mark_symbol.html" %}
+
+    <header class="site-header">
+        <div class="wrap">
+            <nav class="glass" aria-label="Main">
+                <a href="/{{ c.code() }}/#top" class="brand" aria-label="Digitus"><svg aria-hidden="true">
+                        <use href="#mark" />
+                    </svg><b>DIGITUS</b></a>
+                <div class="links">
+                    <a href="/{{ c.code() }}/#services">{{ c.t("nav.services") }}</a>
+                    <a href="/{{ c.code() }}/#ai">{{ c.t("nav.ai") }}</a>
+                    <a href="/{{ c.code() }}/#sectors">{{ c.t("nav.sectors") }}</a>
+                    <a href="/{{ c.code() }}/#why">{{ c.t("nav.why") }}</a>
+                </div>
+                <div class="nav-right">
+                    <div class="lang" role="group" aria-label="{{ c.t(" nav.lang") }}">
+                        <a href="/set-lang/es" hreflang="es" lang="es" rel="alternate" {% if c.is_es() %} class="on"
+                            aria-current="true" {% endif %}>ES</a>
+                        <a href="/set-lang/en" hreflang="en" lang="en" rel="alternate" {% if !c.is_es() %} class="on"
+                            aria-current="true" {% endif %}>EN</a>
+                    </div>
+                    <a href="/{{ c.code() }}/#contact" class="btn btn-primary">{{ c.t("nav.cta") }}</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <div class="wrap">
+        <footer>
+            <div class="foot">
+                <div style="max-width:340px">
+                    <a href="/{{ c.code() }}/#top" class="brand" aria-label="Digitus"><svg aria-hidden="true">
+                            <use href="#mark" />
+                        </svg><b>DIGITUS</b></a>
+                    <p style="margin-top:12px" class="mono">Business &amp; Software Solutions</p>
+                    {#- Registered RNC, shown in full. -#}
+                    <div class="rnc glass"><span class="mono" style="letter-spacing:.08em">RNC 1-33-31249-2</span></div>
+                </div>
+                <div class="cols">
+                    <div><b style="font-size:.9rem">{{ c.t("ft.svc") }}</b>
+                        <a href="/{{ c.code() }}/#services">{{ c.t("svc.ai.t") }}</a>
+                        <a href="/{{ c.code() }}/#services">{{ c.t("svc.dev.t") }}</a>
+                        <a href="/{{ c.code() }}/#services">{{ c.t("svc.cloud.t") }}</a>
+                    </div>
+                    <div><b style="font-size:.9rem">{{ c.t("ft.co") }}</b>
+                        <a href="/{{ c.code() }}/#sectors">{{ c.t("nav.sectors") }}</a>
+                        <a href="/{{ c.code() }}/#why">{{ c.t("nav.why") }}</a>
+                        <a href="/{{ c.code() }}/#contact">{{ c.t("nav.cta") }}</a>
+                    </div>
+                    <div><b style="font-size:.9rem">{{ c.t("ft.contact") }}</b>
+                        <a href="mailto:info@digitus.do">info@digitus.do</a>
+                        <p>{{ c.t("ft.city") }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="legal">
+                <span>© {{ c.year }} Digitus. {{ c.t("ft.rights") }}</span>
+                <span>{{ c.t("ft.reg") }}</span>
+            </div>
+        </footer>
+    </div>
+
+    <dialog id="modal" class="modal" aria-labelledby="modal-title">
+        <div id="modal-body"></div>
+    </dialog>
+</body>
+
+</html>
