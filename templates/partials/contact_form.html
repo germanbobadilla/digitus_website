@@ -1,0 +1,47 @@
+<form id="contact-form" action="/contact" method="post" hx-post="/contact" hx-target="this" hx-swap="outerHTML" hx-disabled-elt="find button[type=submit]">
+  {%- if send_failed %}
+  <div class="form-err" role="alert">{{ c.t("f.err.send") }}</div>
+  {%- endif %}
+  <div class="row">
+    <div>
+      <label for="cf-name">{{ c.t("f.name") }}</label>
+      <input id="cf-name" name="name" value="{{ v.name }}" required maxlength="120" autocomplete="name"{% if e.name %} aria-invalid="true" aria-describedby="cf-name-err"{% endif %}>
+      {%- if e.name %}<p class="field-err" id="cf-name-err">{{ c.t("f.err.name") }}</p>{% endif %}
+    </div>
+    <div>
+      <label for="cf-email">{{ c.t("f.email") }}</label>
+      <input id="cf-email" name="email" type="email" value="{{ v.email }}" required maxlength="254" autocomplete="email"{% if e.email %} aria-invalid="true" aria-describedby="cf-email-err"{% endif %}>
+      {%- if e.email %}<p class="field-err" id="cf-email-err">{{ c.t("f.err.email") }}</p>{% endif %}
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <label for="cf-org">{{ c.t("f.org") }}</label>
+      <input id="cf-org" name="org" value="{{ v.org }}" maxlength="160" autocomplete="organization">
+    </div>
+    <div>
+      <label for="cf-sector">{{ c.t("f.sector") }}</label>
+      <select id="cf-sector" name="sector">
+        {%- for o in sectors %}
+        <option value="{{ o.value }}"{% if o.selected %} selected{% endif %}>{{ o.label }}</option>
+        {%- endfor %}
+      </select>
+    </div>
+  </div>
+  <div>
+    <label for="cf-service">{{ c.t("f.service") }}</label>
+    <select id="cf-service" name="service">
+      {%- for o in services %}
+      <option value="{{ o.value }}"{% if o.selected %} selected{% endif %}>{{ o.label }}</option>
+      {%- endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="cf-msg">{{ c.t("f.msg") }}</label>
+    <textarea id="cf-msg" name="message" required minlength="5" maxlength="5000"{% if e.message %} aria-invalid="true" aria-describedby="cf-msg-err"{% endif %}>{{ v.message }}</textarea>
+    {%- if e.message %}<p class="field-err" id="cf-msg-err">{{ c.t("f.err.msg") }}</p>{% endif %}
+  </div>
+  <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <input type="hidden" name="lang" value="{{ c.code() }}">
+  <button class="btn btn-primary" type="submit" style="justify-self:start">{{ c.t("f.send") }} →</button>
+</form>

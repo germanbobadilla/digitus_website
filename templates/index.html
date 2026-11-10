@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{%- macro pic(name, sizes, eager) -%}
+<img src="/static/img/{{ name }}-1600.webp?v={{ c.v }}" srcset="/static/img/{{ name }}-800.webp?v={{ c.v }} 800w, /static/img/{{ name }}-1600.webp?v={{ c.v }} 1600w" sizes="{{ sizes }}" alt=""{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+{%- endmacro -%}
+
+{%- macro more(s) -%}
+<button class="more" type="button" hx-get="/{{ c.code() }}/partials/service/{{ s.slug }}" hx-target="#modal-body" aria-haspopup="dialog">{{ c.t("svc.more") }} →</button>
+{%- endmacro -%}
+
+{% block content %}
+<div class="wrap">
+  <!-- HERO -->
+  <section class="hero" id="top" style="padding-top:90px">
+    <div class="reveal">
+      <span class="pill glass"><i>AI</i><span>{{ c.t("hero.pill") }}</span></span>
+      <h1>{{ c.t("hero.h1a") }} <span class="grad">{{ c.t("hero.h1b") }}</span></h1>
+      <p class="lead">{{ c.t("hero.lead") }}</p>
+      <div class="cta">
+        <a href="#contact" class="btn btn-primary">{{ c.t("hero.cta1") }} →</a>
+        <a href="#services" class="btn btn-ghost">{{ c.t("hero.cta2") }}</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>AI-first</b><span>{{ c.t("hero.s1") }}</span></div>
+        <div><b>ES · EN</b><span>{{ c.t("hero.s2") }}</span></div>
+        <div><b>RD → LATAM</b><span>{{ c.t("hero.s3") }}</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="media ratio-4-5">
+        {% call pic("hero-team", "(max-width:980px) 100vw, 520px", true) %}{% endcall %}
+        <div class="ph"><span>{{ c.t("img.hero") }}</span></div>
+      </div>
+      <div class="float-card glass one"><span class="dot"></span><span><code>deploy</code> · {{ c.t("hero.f1") }}</span></div>
+      <div class="float-card glass two"><span>🤖 {{ c.t("hero.f2") }}</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="strip"><div class="wrap"><div class="glass">
+  <span>{{ c.t("strip.edu") }}</span><span>{{ c.t("strip.gov") }}</span><span>{{ c.t("strip.priv") }}</span><span>{{ c.t("strip.smb") }}</span>
+</div></div></div>
+
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="mono">{{ c.t("svc.kicker") }}</span>
+    <h2>{{ c.t("svc.h2") }}</h2>
+    <p>{{ c.t("svc.p") }}</p>
+  </div>
+  <div class="services">
+    <article class="svc glass feature reveal">
+      <div>
+        <span class="mono tag">{{ c.t("svc.core") }}</span>
+        <div class="ic ic-indigo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>{{ ai.title }}</h3>
+        <p>{{ ai.desc }}</p>
+        {% call more(ai) %}{% endcall %}
+      </div>
+      <div class="media ratio-16-10" style="align-self:stretch">
+        {% call pic("ai-integration", "(max-width:980px) 100vw, 400px", false) %}{% endcall %}
+        <div class="ph"><span>{{ c.t("img.ai") }}</span></div>
+      </div>
+    </article>
+
+    <article class="svc glass reveal">
+      <div class="ic ic-violet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></div>
+      <h3>{{ dev.title }}</h3><p>{{ dev.desc }}</p>
+      {% call more(dev) %}{% endcall %}
+    </article>
+    <article class="svc glass reveal">
+      <div class="ic ic-amber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h-6zM9 9v8l3 3 3-3V9M6 14l3-1M18 14l-3-1"/></svg></div>
+      <h3>{{ dep.title }}</h3><p>{{ dep.desc }}</p>
+      {% call more(dep) %}{% endcall %}
+    </article>
+    <article class="svc glass reveal">
+      <div class="ic ic-teal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l3-8 2 16 3-8h4"/></svg></div>
+      <h3>{{ dx.title }}</h3><p>{{ dx.desc }}</p>
+      {% call more(dx) %}{% endcall %}
+    </article>
+    <article class="svc glass reveal">
+      <div class="ic ic-coral"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l14-6v14L3 13zM17 9h2a2 2 0 010 4h-2M7 13l1 6h3l-1-5"/></svg></div>
+      <h3>{{ mkt.title }}</h3><p>{{ mkt.desc }}</p>
+      {% call more(mkt) %}{% endcall %}
+    </article>
+    <article class="svc glass wide reveal">
+      <div class="ic ic-sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a5 5 0 01-.6-9.96A6 6 0 0118 8a4.5 4.5 0 01-.5 9H7z"/></svg></div>
+      <div><h3>{{ cloud.title }}</h3><p>{{ cloud.desc }}</p></div>
+      {% call more(cloud) %}{% endcall %}
+    </article>
+  </div>
+</div></section>
+
+<!-- AI APPROACH -->
+<section id="ai"><div class="wrap ai">
+  <div class="reveal">
+    <span class="mono">{{ c.t("ai.kicker") }}</span>
+    <h2 style="margin:14px 0 16px">{{ c.t("ai.h2a") }} <span class="grad">{{ c.t("ai.h2b") }}</span></h2>
+    <p style="color:var(--muted)">{{ c.t("ai.p") }}</p>
+    <div class="steps">
+      <div class="step glass"><span class="n">01</span><div><h3>{{ c.t("ai.s1.t") }}</h3><p>{{ c.t("ai.s1.d") }}</p></div></div>
+      <div class="step glass"><span class="n">02</span><div><h3>{{ c.t("ai.s2.t") }}</h3><p>{{ c.t("ai.s2.d") }}</p></div></div>
+      <div class="step glass"><span class="n">03</span><div><h3>{{ c.t("ai.s3.t") }}</h3><p>{{ c.t("ai.s3.d") }}</p></div></div>
+      <div class="step glass"><span class="n">04</span><div><h3>{{ c.t("ai.s4.t") }}</h3><p>{{ c.t("ai.s4.d") }}</p></div></div>
+    </div>
+  </div>
+  <div class="reveal" style="display:grid;gap:18px">
+    <div class="glass terminal" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c"># digitus · asistente-ciudadano</span>
+<span class="k">agent</span>:
+  model: <span class="s">llm</span>
+  knowledge: <span class="s">docs-municipio/</span>
+  channels: [<span class="s">whatsapp</span>, <span class="s">web</span>]
+  languages: [<span class="s">es</span>, <span class="s">en</span>]
+
+<span class="k">$</span> deploy --serverless
+<span class="s">✓ deployed · p95 142ms · 0 servers to manage</span></pre>
+    </div>
+    <div class="media ratio-16-10">
+      {% call pic("ai-adoption", "(max-width:980px) 100vw, 640px", false) %}{% endcall %}
+      <div class="ph"><span>{{ c.t("img.gov") }}</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SECTORS -->
+<section id="sectors"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="mono">{{ c.t("sec.kicker") }}</span>
+    <h2>{{ c.t("sec.h2") }}</h2>
+    <p>{{ c.t("sec.p") }}</p>
+  </div>
+  <div class="sectors">
+    <article class="sector glass reveal">
+      <div class="media">{% call pic("sector-education", "(max-width:620px) 100vw, (max-width:980px) 50vw, 290px", false) %}{% endcall %}<div class="ph"><span>{{ c.t("img.edu") }}</span></div></div>
+      <div class="body"><h3>{{ c.t("sec.edu.t") }}</h3><p>{{ c.t("sec.edu.d") }}</p></div>
+    </article>
+    <article class="sector glass reveal">
+      <div class="media">{% call pic("sector-public", "(max-width:620px) 100vw, (max-width:980px) 50vw, 290px", false) %}{% endcall %}<div class="ph"><span>{{ c.t("img.pub") }}</span></div></div>
+      <div class="body"><h3>{{ c.t("sec.gov.t") }}</h3><p>{{ c.t("sec.gov.d") }}</p></div>
+    </article>
+    <article class="sector glass reveal">
+      <div class="media">{% call pic("sector-enterprise", "(max-width:620px) 100vw, (max-width:980px) 50vw, 290px", false) %}{% endcall %}<div class="ph"><span>{{ c.t("img.ent") }}</span></div></div>
+      <div class="body"><h3>{{ c.t("sec.priv.t") }}</h3><p>{{ c.t("sec.priv.d") }}</p></div>
+    </article>
+    <article class="sector glass reveal">
+      <div class="media">{% call pic("sector-smb", "(max-width:620px) 100vw, (max-width:980px) 50vw, 290px", false) %}{% endcall %}<div class="ph"><span>{{ c.t("img.smb") }}</span></div></div>
+      <div class="body"><h3>{{ c.t("sec.smb.t") }}</h3><p>{{ c.t("sec.smb.d") }}</p></div>
+    </article>
+  </div>
+</div></section>
+
+<!-- BANNER -->
+<div class="wrap" style="padding-top:20px"><div class="rd reveal">
+  {% call pic("banner-tech", "100vw", false) %}{% endcall %}
+  <div class="inner"><span class="mono">{{ c.t("rd.kicker") }}</span><h2>{{ c.t("rd.h2") }}</h2><p>{{ c.t("rd.p") }}</p></div>
+</div></div>
+
+<!-- WHY -->
+<section id="why"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="mono">{{ c.t("why.kicker") }}</span>
+    <h2>{{ c.t("why.h2") }}</h2>
+  </div>
+  <div class="why">
+    <div class="media reveal">
+      {% call pic("team-launch", "(max-width:980px) 100vw, 590px", false) %}{% endcall %}
+      <div class="ph"><span>{{ c.t("img.team") }}</span></div>
+    </div>
+    <div class="why-list">
+      <div class="glass reveal"><h3>{{ c.t("why.1.t") }}</h3><p>{{ c.t("why.1.d") }}</p></div>
+      <div class="glass reveal"><h3>{{ c.t("why.2.t") }}</h3><p>{{ c.t("why.2.d") }}</p></div>
+      <div class="glass reveal"><h3>{{ c.t("why.3.t") }}</h3><p>{{ c.t("why.3.d") }}</p></div>
+      <div class="glass reveal"><h3>{{ c.t("why.4.t") }}</h3><p>{{ c.t("why.4.d") }}</p></div>
+    </div>
+  </div>
+  <div class="stack" style="margin-top:20px">
+    <div class="glass reveal"><b>AWS</b><span>{{ c.t("stack.aws") }}</span></div>
+    <div class="glass reveal"><b>Microsoft Azure</b><span>{{ c.t("stack.azure") }}</span></div>
+    <div class="glass reveal"><b>Google Workspace</b><span>{{ c.t("stack.gws") }}</span></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+  <div class="contact glass reveal">
+    <div class="info">
+      <span class="mono">{{ c.t("ct.kicker") }}</span>
+      <h2 style="margin-top:14px">{{ c.t("ct.h2") }}</h2>
+      <p>{{ c.t("ct.p") }}</p>
+      <a class="mail" href="mailto:info@digitus.do">info@digitus.do</a>
+      <p style="margin-top:22px;font-size:.9rem">{{ c.t("ct.loc") }}</p>
+    </div>
+    {{ form|safe }}
+  </div>
+</div></section>
+{% endblock %}

@@ -1,36 +1,6 @@
-# Environment variables
+/target
+.aws-sam/
+samconfig.toml
 .env
-.env.local
-.env.production
-
-# AWS credentials
-.aws/
-aws-credentials.json
-aws-credentials.txt
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-
-# Dependencies
-node_modules/
-
-# Build outputs
-dist/
-build/
-marketing/
-
-# Temporary files
-*.tmp
-*.temp
-blog-dev/
+.claude/settings.local.json

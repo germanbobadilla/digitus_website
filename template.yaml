@@ -1,0 +1,271 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Digitus website. Rust/Axum on AWS Lambda (Function URL) for HTML and HTMX partials,
+  S3 for /static/*, both behind one CloudFront distribution.
+  Build first: `cargo lambda build --release --arm64`.
+
+Parameters:
+  SiteUrl:
+    Type: String
+    Default: https://digitus.do
+    Description: Public origin used for canonical/hreflang URLs (no trailing slash).
+  DomainName:
+    Type: String
+    Default: digitus.do
+    Description: Apex domain. The stack also serves www.<DomainName>.
+  HostedZoneId:
+    Type: String
+    Default: ""
+    Description: >
+      Route 53 hosted zone ID for DomainName. When set, the stack issues the ACM certificate
+      (DNS-validated automatically), attaches apex + www to CloudFront and creates the A/AAAA alias
+      records. Leave empty to deploy on the *.cloudfront.net domain only. Deploy in us-east-1.
+  ContactFrom:
+    Type: String
+    Default: ""
+    Description: Verified SES sender, e.g. "Digitus Web <web@digitus.do>". Empty = log only, no email.
+  ContactFromAddress:
+    Type: String
+    Default: ""
+    Description: Bare email of ContactFrom (used to scope the SES IAM permission), e.g. web@digitus.do.
+  ContactTo:
+    Type: String
+    Default: info@digitus.do
+  AssetVersion:
+    Type: String
+    Default: dev
+    Description: Cache-busting suffix for /static URLs (CI passes the git SHA).
+  OriginVerifySecret:
+    Type: String
+    NoEcho: true
+    MinLength: 16
+    Description: Shared secret CloudFront sends as x-origin-verify; the function rejects requests without it.
+
+Conditions:
+  HasDomain: !Not [!Equals [!Ref HostedZoneId, ""]]
+  HasSes: !Not [!Equals [!Ref ContactFromAddress, ""]]
+
+Resources:
+  # ------------------------------------------------------------------ Domain
+  Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Condition: HasDomain
+    Properties:
+      DomainName: !Ref DomainName
+      SubjectAlternativeNames: [!Sub "www.${DomainName}"]
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Ref DomainName
+          HostedZoneId: !Ref HostedZoneId
+        - DomainName: !Sub "www.${DomainName}"
+          HostedZoneId: !Ref HostedZoneId
+
+  DnsRecords:
+    Type: AWS::Route53::RecordSetGroup
+    Condition: HasDomain
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      RecordSets:
+        - { Name: !Ref DomainName, Type: A, AliasTarget: { DNSName: !GetAtt Distribution.DomainName, HostedZoneId: Z2FDTNDATAQYW2 } }
+        - { Name: !Ref DomainName, Type: AAAA, AliasTarget: { DNSName: !GetAtt Distribution.DomainName, HostedZoneId: Z2FDTNDATAQYW2 } }
+        - { Name: !Sub "www.${DomainName}", Type: A, AliasTarget: { DNSName: !GetAtt Distribution.DomainName, HostedZoneId: Z2FDTNDATAQYW2 } }
+        - { Name: !Sub "www.${DomainName}", Type: AAAA, AliasTarget: { DNSName: !GetAtt Distribution.DomainName, HostedZoneId: Z2FDTNDATAQYW2 } }
+
+  # ------------------------------------------------------------------ Lambda
+  SiteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-web"
+      CodeUri: target/lambda/digitus/
+      Handler: bootstrap
+      Runtime: provided.al2023
+      Architectures: [arm64]
+      MemorySize: 256
+      Timeout: 10
+      LoggingConfig:
+        LogFormat: JSON
+      Environment:
+        Variables:
+          SITE_URL: !Ref SiteUrl
+          CONTACT_FROM: !Ref ContactFrom
+          CONTACT_TO: !Ref ContactTo
+          ASSET_VERSION: !Ref AssetVersion
+          ORIGIN_VERIFY_SECRET: !Ref OriginVerifySecret
+          RUST_LOG: info
+      FunctionUrlConfig:
+        AuthType: NONE # protected by the x-origin-verify header instead (OAC breaks POST bodies)
+      Policies:
+        - !If
+          - HasSes
+          - Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: ses:SendEmail
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    ses:FromAddress: !Ref ContactFromAddress
+          - !Ref AWS::NoValue
+
+  SiteFunctionLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-web"
+      RetentionInDays: 30
+
+  # ---------------------------------------------------------------- S3 static
+  StaticBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 }
+      OwnershipControls:
+        Rules: [{ ObjectOwnership: BucketOwnerEnforced }]
+
+  StaticBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref StaticBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: cloudfront.amazonaws.com }
+            Action: s3:GetObject
+            Resource: !Sub "${StaticBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+
+  StaticOac:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-static"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # --------------------------------------------------------------- CloudFront
+  # Pages: honor the origin's Cache-Control (the app sends no-store for "/" and
+  # /contact, and a short public TTL for /{lang}/). Nothing user-specific in the key.
+  PageCachePolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub "${AWS::StackName}-pages"
+        MinTTL: 0
+        DefaultTTL: 0
+        MaxTTL: 86400
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: true
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig: { HeaderBehavior: none }
+          CookiesConfig: { CookieBehavior: none }
+          QueryStringsConfig: { QueryStringBehavior: none }
+
+  # Forwarded to Lambda but not part of the cache key. Never forward Host:
+  # Lambda Function URLs reject foreign Host headers.
+  PageOriginRequestPolicy:
+    Type: AWS::CloudFront::OriginRequestPolicy
+    Properties:
+      OriginRequestPolicyConfig:
+        Name: !Sub "${AWS::StackName}-pages"
+        HeadersConfig:
+          HeaderBehavior: whitelist
+          Headers:
+            - CloudFront-Viewer-Country
+            - Accept-Language
+            - HX-Request
+            - HX-Target
+            - HX-Trigger
+            - HX-Current-URL
+        CookiesConfig:
+          CookieBehavior: whitelist
+          Cookies: [lang]
+        QueryStringsConfig:
+          QueryStringBehavior: all
+
+  # Static assets: long TTL; ?v= is part of the key so deploys bust the cache.
+  StaticCachePolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub "${AWS::StackName}-static"
+        MinTTL: 86400
+        DefaultTTL: 31536000
+        MaxTTL: 31536000
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: true
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig: { HeaderBehavior: none }
+          CookiesConfig: { CookieBehavior: none }
+          QueryStringsConfig:
+            QueryStringBehavior: whitelist
+            QueryStrings: [v]
+
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: !Sub "${AWS::StackName} (Rust/Axum on Lambda + S3)"
+        HttpVersion: http2and3
+        IPV6Enabled: true
+        PriceClass: PriceClass_All # LATAM edges
+        Aliases: !If [HasDomain, [!Ref DomainName, !Sub "www.${DomainName}"], !Ref AWS::NoValue]
+        ViewerCertificate: !If
+          - HasDomain
+          - AcmCertificateArn: !Ref Certificate
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2021
+          - CloudFrontDefaultCertificate: true
+        Origins:
+          - Id: lambda
+            DomainName: !Select [2, !Split ["/", !GetAtt SiteFunctionUrl.FunctionUrl]]
+            CustomOriginConfig:
+              OriginProtocolPolicy: https-only
+              OriginSSLProtocols: [TLSv1.2]
+            OriginCustomHeaders:
+              - HeaderName: x-origin-verify
+                HeaderValue: !Ref OriginVerifySecret
+          - Id: static
+            DomainName: !GetAtt StaticBucket.RegionalDomainName
+            OriginAccessControlId: !GetAtt StaticOac.Id
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        DefaultCacheBehavior:
+          TargetOriginId: lambda
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD, OPTIONS, PUT, PATCH, POST, DELETE]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          CachePolicyId: !Ref PageCachePolicy
+          OriginRequestPolicyId: !Ref PageOriginRequestPolicy
+          ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03 # Managed-SecurityHeadersPolicy
+        CacheBehaviors:
+          - PathPattern: /static/*
+            TargetOriginId: static
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods: [GET, HEAD]
+            CachedMethods: [GET, HEAD]
+            Compress: true
+            CachePolicyId: !Ref StaticCachePolicy
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+Outputs:
+  DistributionId:
+    Value: !Ref Distribution
+  DistributionDomain:
+    Value: !GetAtt Distribution.DomainName
+  StaticBucketName:
+    Value: !Ref StaticBucket
+  FunctionUrl:
+    Value: !GetAtt SiteFunctionUrl.FunctionUrl
