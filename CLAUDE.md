@@ -64,4 +64,4 @@ Templates and locales are compiled into the binary, so **restart `make dev` afte
 - SES: `CONTACT_FROM` must be a verified identity. While the account is in the SES sandbox, recipients must be verified too.
 - Deploys, `aws` and `sam` commands are outward-facing: ask the owner before running them.
 - Domain: **digitus.do**. Its Route 53 hosted zone is in the same AWS account and pointed nowhere before this stack. With `HostedZoneId` set, the stack owns the ACM cert and the apex/www alias records.
-- The legacy static site (git history before the rebuild) deployed to bucket `digitus.com.do` / distribution `E1X8PSUZIPUQPI`. It is separate from this stack.
+- The old static site and its S3 bucket (`digitus.com.do`) were deleted by the owner. This stack is the only deployment.

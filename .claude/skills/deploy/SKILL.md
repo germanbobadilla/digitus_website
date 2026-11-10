@@ -26,7 +26,7 @@ sam validate --lint
 1. SES (us-east-1): verify the `digitus.do` domain identity. It's in Route 53, so enable Easy DKIM and let SES publish the records. If the account is in the SES sandbox, verify `CONTACT_TO` too, or request production access.
 2. Optionally, the first time: deploy with `HOSTED_ZONE_ID` empty and test on the `DistributionDomain` output. Check: `/` redirects by country, `/es/` and `/en/` render, `/static/css/site.css` loads, the contact form delivers.
 3. Go live: set `HOSTED_ZONE_ID`. The stack issues the ACM cert (DNS-validated in the zone, a few minutes), attaches `digitus.do` and `www.digitus.do` to CloudFront, and creates the A/AAAA alias records.
-   The domain currently points nowhere, so there's no cutover. The legacy `digitus.com.do` distribution `E1X8PSUZIPUQPI` is unaffected.
+   The domain currently points nowhere, so there is no cutover.
 
 ## Troubleshooting
 - 403 "forbidden" from Lambda: the `x-origin-verify` header doesn't match `ORIGIN_VERIFY_SECRET`.
